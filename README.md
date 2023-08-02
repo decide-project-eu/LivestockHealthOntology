@@ -5,6 +5,6 @@
 
 3: Convert raw cattle data into RDF format, harnessing RDF benefits for improved data sharing, integration, and querying.
 
-4: Establish a mapping process to align cleaned RDF data with the species-specific LHO ontology, ensuring seamless semantic interoperability.
+4:Create a mapping process to match the cleaned RDF data with the species-specific LHO ontology, ensuring that the data can work together smoothly and be easily understood. You can find the code in R, PySpark, and Python notebooks here.
 
 5: Implement a data visualization tool to analyze and report farm animal disease management data, empowering insightful decision-making and data interpretation.
