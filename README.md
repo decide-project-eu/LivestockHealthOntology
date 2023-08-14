@@ -20,14 +20,14 @@ For ARSIA, PAthosen, Ireland, and GD labs:
 
 . Lastly, the GD lab's data is functional with Panda in both Python and R.
 
-In summary, while the Pyspark implementation was showcased with the DGZ dataset, the same methodology was followed for the remaining datasets (GD, Pathosen, ARSIA, and Ireland), albeit without a separate Pyspark demonstration.
+In summary, while the Pyspark implementation was showcased with the DGZ dataset, the same methodology was followed for the remaining datasets (GD, Pathosen, ARSIA, and Ireland), albeit without a separate Pyspark demonstration. In the 'UnionOfAllRDF.ipynb' notebook, we aggregate RDF data from DGZ, Pathosen, Ireland, GD, and ARSIA Labs. This process involves combining RDF files from these sources into a unified representation. The resulting unified RDF representation is then utilized in visualization tools for example Tableau for comprehensive analysis.
 
 | Platforms         |          DGZ             |	     GD             |	      Pathosen	            |      Ireland           |	    Arsia              |
 | ------------------| -------------------------| -------------------- |-----------------------------| -----------------------| ------------------------|
 | Python Panda      | DGZDataPandacode.ipynb   | GDDataPandaCode.ipynb| PathosenDataPandaCode.ipynb | IrelandPandacode.ipynb | ARSIADataPandaCode.ipynb|
 | R                 | DGZDataRacode.ipynb      | GDDataRCode.ipynb    | PathosenDataRCode.ipynb     | IrelandRCode.ipynb     | ARSIADataRCode.ipynb    |
 | PySpark           | DGZDataPysparkcode.ipynb |----------------------|-----------------------------| -----------------------| ------------------------|
-
+| Union of All RDF  | --------------------------------UnionOfAllRDF.ipynb------------------------------------------------------------------------------|
 
 
 
