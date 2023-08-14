@@ -12,9 +12,13 @@
 We've made CattleUse work on three platforms: Python, R, and Pyspark. We did this by using data from different animal health service labs in Europe: DGZ, GD, Pathosen, Ireland, and ARSIA. Specifically, the DGZ lab's data works on all three platforms.
 For ARSIA, PAthosen, Ireland, and GD labs:
 1: We used Panda in Python and R to implement the ARSIA lab's data.
+
 2: Similarly, we used Panda in Python and R for the Pathosen lab's data.
+
 3: The Ireland lab's data also works using the Panda library in both Python and R.
+
 4: Lastly, the GD lab's data is functional with Panda in both Python and R.
+
 In summary, while the Pyspark implementation was showcased with the DGZ dataset, the same methodology was followed for the remaining datasets (GD, Pathosen, ARSIA, and Ireland), albeit without a separate Pyspark demonstration.
 
 | Platforms         |          DGZ             |	     GD             |	      Pathosen	            |      Ireland           |	    Arsia              |
