@@ -27,7 +27,7 @@ In summary, while the Pyspark implementation was showcased with the DGZ dataset,
 | Python Panda      | DGZDataPandacode.ipynb   | GDDataPandaCode.ipynb| PathosenDataPandaCode.ipynb | IrelandPandacode.ipynb | ARSIADataPandaCode.ipynb|
 | R                 | DGZDataRacode.ipynb      | GDDataRCode.ipynb    | PathosenDataRCode.ipynb     | IrelandRCode.ipynb     | ARSIADataRCode.ipynb    |
 | PySpark           | DGZDataPysparkcode.ipynb |----------------------|-----------------------------| -----------------------| ------------------------|
-| Union of All RDF  | --------------------------------UnionOfAllRDF.ipynb------------------------------------------------------------------------------|
+| Union of All RDF  | -------------------------|-UnionOfAllRDF.ipynb--|-----------------------------|------------------------|-------------------------|
 
 
 
