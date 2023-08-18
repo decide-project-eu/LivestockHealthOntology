@@ -1,6 +1,6 @@
 # LiveStockHealthOntologyWp1
-### DOI: 10.5281/zenodo.8261126
-[![DOI](https://zenodo.org/badge/659116364.svg)](https://zenodo.org/badge/latestdoi/659116364)
+### [![DOI](https://zenodo.org/badge/659116364.svg)](https://zenodo.org/badge/latestdoi/659116364)
+
 1: Create a standardized FAIR guideline framework that balances data requirements, accessibility, availability, connectivity, and value generation.
 
 2: Design a Livestock Health Ontology (LHO) tailored to specific species, enriching knowledge graphs with domain expertise.
