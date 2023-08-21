@@ -26,7 +26,7 @@ In summary, while the Pyspark implementation was showcased with the DGZ dataset,
 
 | Platforms         |          DGZ             |	     GD             |	      Pathosen	            |      Ireland           |	    Arsia              |
 | ------------------| -------------------------| -------------------- |-----------------------------| -----------------------| ------------------------|
-| Python Panda      | [DGZDataPandacode.ipynb ](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/ARSIADataPandaCode.ipynb)  | GDDataPandaCode.ipynb| PathosenDataPandaCode.ipynb | IrelandPandacode.ipynb | ARSIADataPandaCode.ipynb|
+| Python Panda      | [DGZDataPandacode.ipynb ](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/DGZDataPandacode.ipynb)  | [GDDataPandaCode.ipynb] (https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/GDDataPandaCode.ipynb)| PathosenDataPandaCode.ipynb https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PathosenDataPandaCode.ipynb | IrelandPandacode.ipynb https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/IrelandPandacode.ipynb| ARSIADataPandaCode.ipynb https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/ARSIADataPandaCode.ipynb|
 | R                 | DGZDataRacode.ipynb      | GDDataRCode.ipynb    | PathosenDataRCode.ipynb     | IrelandRCode.ipynb     | ARSIADataRCode.ipynb    |
 | PySpark           | DGZDataPysparkcode.ipynb |----------------------|-----------------------------| -----------------------| ------------------------|
 | Union of All RDF  | -------------------------|-UnionOfAllRDF.ipynb--|-----------------------------|------------------------|-------------------------|
