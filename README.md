@@ -11,18 +11,9 @@
 
 5: Implement a data visualization tool to analyze and report farm animal disease management data, empowering insightful decision-making and data interpretation.
 
-We've made CattleUse work on three platforms: Python, R, and Pyspark. We did this by using data from different animal health service labs in Europe: DGZ, GD, Pathosen, Ireland, and ARSIA. Specifically, the DGZ lab's data works on all three platforms.
-For ARSIA, PAthosen, Ireland, and GD labs:
+We've made CattleUse work on three platforms: Python, R, and Pyspark. We did this by using data from different animal health service labs in Europe.
 
-. We used Panda in Python and R to implement the ARSIA lab's data.
-
-. Similarly, we used Panda in Python and R for the Pathosen lab's data.
-
-. The Ireland lab's data also works using the Panda library in both Python and R.
-
-. Lastly, the GD lab's data is functional with Panda in both Python and R.
-
-In summary, while the Pyspark implementation was showcased with the DGZ dataset, the same methodology was followed for the remaining datasets (GD, Pathosen, ARSIA, and Ireland), albeit without a separate Pyspark demonstration. In the 'UnionOfAllRDF.ipynb' notebook, we aggregate RDF data from DGZ, Pathosen, Ireland, GD, and ARSIA Labs. This process involves combining RDF files from these sources into a unified representation. The resulting unified RDF representation is then utilized in visualization tools for example Tableau for comprehensive analysis.
+In summary, while the Pyspark implementation was showcased with the Lab1 dataset, the same methodology was followed for the remaining datasets (Lab2, Lab3, Lab4, and Lab5), albeit without a separate Pyspark demonstration. In the 'UnionOfAllRDF.ipynb' notebook, we aggregate RDF data from Lab1, Lab2, Lab3, Lab4, and Lab5. This process involves combining RDF files from these sources into a unified representation. The resulting unified RDF representation is then utilized in visualization tools for example Tableau for comprehensive analysis.
 
 | Platforms         |          Lab1             |	     Lab2             |	      Lab3	            |      Lab4           |	    Lab5              |
 | ------------------| -------------------------| -------------------- |-----------------------------| -----------------------| ------------------------|
