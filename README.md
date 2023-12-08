@@ -5,7 +5,7 @@
 
 2: Design a Livestock Health Ontology (LHO) tailored to specific species, enriching knowledge graphs with domain expertise.
 
-3: Convert raw cattle data into RDF format, harnessing RDF benefits for improved data sharing, integration, and querying.
+3: Convert raw cattle, pig and poultry data into RDF format, harnessing RDF benefits for improved data sharing, integration, and querying.
 
 4:Create a mapping process to match the cleaned RDF data with the species-specific LHO ontology, ensuring that the data can work together smoothly and be easily understood. You can find the code in R, PySpark, and Python notebooks here.
 
@@ -21,6 +21,7 @@ In summary, while the Pyspark implementation was showcased with the Lab1 dataset
 | R                 | [CattleLab1DataRCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab1DataRCode.ipynb)      | [CattleLab2DataRCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab2DataRCode.ipynb)    | [CattleLab3DataRCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab3DataRCode.ipynb)     | [CattleLab4RCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab4DataRCode.ipynb)     | [CattleLab5DataRCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab5DataRCode.ipynb)    |
 | PySpark           | [CattleLab1DataPysparkcode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab1DataPysparkCode.ipynb) |----------------------|-----------------------------| -----------------------| ------------------------|
 | Python Panda      | [PigLab1DataPandacode.ipynb ](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PigLab1.ipynb) | [PigLab2DataPandaCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PigLab2.ipynb)  |[PigLab3DataPandaCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PigLab3.ipynb) |[PigLab4Pandacode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PigLab4.ipynb)| [PigLab5DataPandaCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PigLab5.ipynb)|
+| Python Panda      | [PoultryLab1DataPandacode.ipynb ](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/PigLab1.ipynb) |  ------------------------  | ------------------------ | ------------------------|  ------------------------|
 | Union of All RDF  | -------------------------|-[UnionOfAllRDF.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/UnionofAllRDF.ipynb)--|-----------------------------|------------------------|-------------------------|
 
 
