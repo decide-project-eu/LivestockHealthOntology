@@ -1,4 +1,4 @@
-# LiveStockHealthOntologyWp1
+# LivestockHealthOntologyWp1
 ### [![DOI](https://zenodo.org/badge/659116364.svg)](https://zenodo.org/badge/latestdoi/659116364)
 
 1: Create a standardized FAIR guideline framework that balances data requirements, accessibility, availability, connectivity, and value generation.
