@@ -15,6 +15,14 @@ We've made CattleUse work on three platforms: Python, R, and Pyspark. We did thi
 
 In summary, while the Pyspark implementation was showcased with the Lab1 dataset, the same methodology was followed for the remaining datasets (Lab2, Lab3, Lab4, and Lab5), albeit without a separate Pyspark demonstration. In the 'UnionOfAllRDF.ipynb' notebook, we aggregate RDF data from Lab1, Lab2, Lab3, Lab4, and Lab5. This process involves combining RDF files from these sources into a unified representation. The resulting unified RDF representation is then utilized in visualization tools for example Tableau for comprehensive analysis.
 
+# The general view of ontology is shown below.
+
+![image](https://github.com/decide-project-eu/LivestockHealthOntologyIntegration-CattlePigPoultryUsecase-/assets/126476000/a172c45e-449f-4f3e-83c5-a90414b8db4c)
+
+
+
+
+
 | Platforms         |          Lab1             |	     Lab2             |	      Lab3	            |      Lab4           |	    Lab5              |
 | ------------------| -------------------------| -------------------- |-----------------------------| -----------------------| ------------------------|
 | Python Panda      | [CattleLab1DataPandacode.ipynb ](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab1DataPandacode.ipynb) | [CattleLab2DataPandaCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab2DataPandaCode.ipynb)  |[CattleLab3DataPandaCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab3DataPandaCode.ipynb) |[CattleLab4DataPandacode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab4DataPandaCode.ipynb)| [CattleLab5DataPandaCode.ipynb](https://github.com/decide-project-eu/LiveStockHealthOntologyWp1/blob/main/CattleLab5Pandacode.ipynb)|
