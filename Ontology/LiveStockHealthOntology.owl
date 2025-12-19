@@ -3,18 +3,16 @@
      xml:base="http://www.purl.org/decide/LiveStockHealthOnto/LHO"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:LHO="http://www.purl.org/decide/LiveStockHealthOnto/LHO#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:NCIT="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:decide="https://www.purl.org/decide#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO">
-        <owl:versionIRI rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO/1.3"/>
-        <owl:imports rdf:resource="http://www.purl.org/decide"/>
-        <obo:IAO_0000117>Saba Noor</obo:IAO_0000117>
+        <owl:versionIRI rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO/1.4"/>
+        <NCIT:IAO_0000117>Saba Noor</NCIT:IAO_0000117>
         <dc:contributor>Saba Noor
 Miel Hostens</dc:contributor>
         <hasExactSynonym xml:lang="en">LHO</hasExactSynonym>
@@ -25,7 +23,8 @@ Miel Hostens</dc:contributor>
 https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">https://bioportal.bioontology.org/ontologies/LHO</rdfs:seeAlso>
         <owl:priorVersion xml:lang="en">V1.1</owl:priorVersion>
-        <owl:versionInfo xml:lang="en">V1.3</owl:versionInfo>
+        <owl:priorVersion xml:lang="en">V1.3</owl:priorVersion>
+        <owl:versionInfo xml:lang="en">V1.4</owl:versionInfo>
         <skos:PrefLable xml:lang="en">LiveStock HealthOntology</skos:PrefLable>
     </owl:Ontology>
     
@@ -54,7 +53,7 @@ https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</rdfs:seeAlso>
     <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117">
-        <obo:IAO_0000112>For example, in the context of cattle, breeds can be categorized as meat, dairy, or mixed breeds, each breed for specific agricultural or culinary purposes. Similarly, in the context of poultry, breeds can be categorized as meat breeds or egg-laying breeds. Pigs are also breed for meat production. The &apos;Breed&apos; class serves as a foundational concept for classifying and organizing various animal breeds within the ontology.</obo:IAO_0000112>
+        <NCIT:IAO_0000112>For example, in the context of cattle, breeds can be categorized as meat, dairy, or mixed breeds, each breed for specific agricultural or culinary purposes. Similarly, in the context of poultry, breeds can be categorized as meat breeds or egg-laying breeds. Pigs are also breed for meat production. The &apos;Breed&apos; class serves as a foundational concept for classifying and organizing various animal breeds within the ontology.</NCIT:IAO_0000112>
         <rdfs:comment>The person primarily responsible for the creation or curation of a given ontology term.</rdfs:comment>
         <rdfs:label>term editor</rdfs:label>
     </owl:AnnotationProperty>
@@ -159,7 +158,6 @@ https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</rdfs:seeAlso>
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS23">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25341"/>
-        <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS21"/>
         <rdfs:comment>Links a region to pathogen prevalence.</rdfs:comment>
         <rdfs:label xml:lang="en">hasPrevalence</rdfs:label>
     </owl:ObjectProperty>
@@ -310,6 +308,26 @@ https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</rdfs:seeAlso>
     
 
 
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#affectsSpecies -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#affectsSpecies">
+        <rdfs:comment xml:lang="en">Links a pathogen, breed, sample type, or country to the species it applies to. Used to filter species-specific categories in a multi-species ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">affectsSpecies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#causesDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#causesDisease">
+        <rdfs:domain rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <rdfs:range rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005001"/>
+        <rdfs:comment xml:lang="en">Links a pathogen to the type of disease it causes. Used to classify pathogens into Viral or Bacterial groups for graph construction.</rdfs:comment>
+        <rdfs:label xml:lang="en">causesDisease</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasAge -->
 
     <owl:ObjectProperty rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasAge">
@@ -393,6 +411,18 @@ https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</rdfs:seeAlso>
         <rdfs:domain rdf:resource="http://www.purl.org/decide#Sample"/>
         <rdfs:range rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmType"/>
         <rdfs:comment>link sample to the farm type</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasGeographicNeighbor -->
+
+    <owl:ObjectProperty rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#hasGeographicNeighbor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <rdfs:comment xml:lang="en">Symmetric property indicating two countries share a geographic land border. Used to create geographic adjacency edges in the knowledge graph.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasGeographicNeighbor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -726,7 +756,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_16398">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</NCIT:IAO_0000412>
         <hasExactSynonym xml:lang="en">BRSV</hasExactSynonym>
         <rdfs:comment xml:lang="en">Bovine Respiratory Syncytial Virus (BRSV) is a major cause of respiratory disease in cattle, characterized by coughing, nasal discharge, and increased respiratory rate.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://agrovoc.fao.org/browse/agrovoc/en/page/c_16398</rdfs:isDefinedBy>
@@ -750,7 +780,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_27241">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</NCIT:IAO_0000412>
         <hasExactSynonym>MB</hasExactSynonym>
         <rdfs:comment xml:lang="en">Mycoplasma bovis is a bacterial pathogen that primarily affects cattle, causing respiratory disease, arthritis, mastitis, and other systemic infections.</rdfs:comment>
         <rdfs:isDefinedBy>https://agrovoc.fao.org/browse/agrovoc/en/page/c_27241</rdfs:isDefinedBy>
@@ -775,8 +805,8 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_2c550294">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>ISAV</obo:IAO_0000412>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>ISAV</NCIT:IAO_0000412>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</NCIT:IAO_0000412>
         <hasExactSynonym>Infectious salmon anaemia</hasExactSynonym>
         <rdfs:comment>Causes Infectious Salmon Anemia (ISA), a serious viral disease in Atlantic salmon</rdfs:comment>
         <rdfs:label>InfectiousSalmonAnemiaVirus</rdfs:label>
@@ -788,7 +818,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_33359">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</NCIT:IAO_0000412>
         <hasExactSynonym xml:lang="en">HS</hasExactSynonym>
         <rdfs:comment xml:lang="en">Haemophilus somnus classified as Histophilus somni, is a Gram-negative bacterium that can cause respiratory and systemic infections in cattle and other domestic and farm animals</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://agrovoc.fao.org/browse/agrovoc/en/page/c_33359</rdfs:isDefinedBy>
@@ -801,7 +831,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_34495">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/</NCIT:IAO_0000412>
         <hasExactSynonym>PH</hasExactSynonym>
         <rdfs:comment xml:lang="en">Pasteurella haemolytica is a Gram-negative bacterium associated with respiratory infections, particularly in cattle, causing bovine respiratory disease complex (BRDC) or shipping fever.</rdfs:comment>
         <rdfs:isDefinedBy>https://agrovoc.fao.org/browse/agrovoc/en/page/c_34495</rdfs:isDefinedBy>
@@ -826,7 +856,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_6145">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/page/c_6145</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/page/c_6145</NCIT:IAO_0000412>
         <rdfs:comment>All domesticated birds used for the production of meat or eggs for consumption, for the production of other commercial products, for restocking, supplies of game, or for breeding these categories of birds.</rdfs:comment>
         <rdfs:label xml:lang="en">Poultry</rdfs:label>
         <skos:PrefLable>poultry</skos:PrefLable>
@@ -850,7 +880,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://aims.fao.org/aos/agrovoc/c_7555">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
-        <obo:IAO_0000412>https://aims.fao.org/aos/agrovoc/c_7555.html</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://aims.fao.org/aos/agrovoc/c_7555.html</NCIT:IAO_0000412>
         <rdfs:comment>The pig (Sus domesticus), often called swine, hog, or domestic pig</rdfs:comment>
         <rdfs:label xml:lang="en">Pig</rdfs:label>
         <skos:PrefLable xml:lang="en">pig</skos:PrefLable>
@@ -862,7 +892,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005001">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>http://opendata.inra.fr/AHOL/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>http://opendata.inra.fr/AHOL/</NCIT:IAO_0000412>
         <rdfs:isDefinedBy>Damage on the health. The modifications of an organism defending itself against an infection or another damager factor. Perturbation of the animal&apos;s normal functions.</rdfs:isDefinedBy>
         <rdfs:isDefinedBy>https://bioportal.bioontology.org/ontologies/AHOL?p=summary</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Disease</rdfs:label>
@@ -874,7 +904,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005011">
         <rdfs:subClassOf rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005001"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/AHOL?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/AHOL?p=summary</NCIT:IAO_0000412>
         <rdfs:comment>Infectious disease class includes diseases caused by pathogens such as viruses, bacteria, fungi, or parasites that can spread between animals, humans, or both</rdfs:comment>
         <rdfs:label>Infectious Disease</rdfs:label>
     </owl:Class>
@@ -885,9 +915,14 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005015">
         <rdfs:subClassOf rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005011"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/AHOL?p=summary</obo:IAO_0000412>
-        <rdfs:comment>Viral disease is an illness caused by a virus, where the virus invades living cells to reproduce, often leading to symptoms like fever, cough, or organ damage.</rdfs:comment>
-        <rdfs:label>Viral Disease</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://opendata.inra.fr/AHOL/AHOL_0005016 -->
+
+    <owl:Class rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005016">
+        <rdfs:subClassOf rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005011"/>
     </owl:Class>
     
 
@@ -896,7 +931,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG34">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>http://opendata.inra.fr/AnimalDiseasesOnto/</obo:IAO_0000412>
+        <NCIT:IAO_0000412>http://opendata.inra.fr/AnimalDiseasesOnto/</NCIT:IAO_0000412>
         <hasExactSynonym xml:lang="en">BCV</hasExactSynonym>
         <rdfs:comment xml:lang="en">Bovine coronavirus primarily causes enteric (intestinal) infections in calves, leading to diarrhea.</rdfs:comment>
         <rdfs:isDefinedBy>http://opendata.inra.fr/AnimalDiseasesOnto/AG34</rdfs:isDefinedBy>
@@ -909,7 +944,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG509">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>http://opendata.inra.fr/AnimalDiseasesOnto</obo:IAO_0000412>
+        <NCIT:IAO_0000412>http://opendata.inra.fr/AnimalDiseasesOnto</NCIT:IAO_0000412>
         <hasExactSynonym xml:lang="en">IB</hasExactSynonym>
         <rdfs:comment xml:lang="en">Infectious bronchitis is a highly contagious viral respiratory disease in chickens, characterized by respiratory distress and egg production drops.</rdfs:comment>
         <rdfs:isDefinedBy>http://opendata.inra.fr/AnimalDiseasesOnto/AG509</rdfs:isDefinedBy>
@@ -922,7 +957,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG744">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>http://opendata.inra.fr/AnimalDiseasesOnto</obo:IAO_0000412>
+        <NCIT:IAO_0000412>http://opendata.inra.fr/AnimalDiseasesOnto</NCIT:IAO_0000412>
         <hasExactSynonym xml:lang="en">MH</hasExactSynonym>
         <rdfs:comment xml:lang="en">Mannheimia haemolytica is a bacterium associated with bovine respiratory disease in cattle, causing pneumonia and respiratory distress.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">http://opendata.inra.fr/AnimalDiseasesOnto/AG744</rdfs:isDefinedBy>
@@ -935,7 +970,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://opendata.inra.fr/AnimalDiseasesOnto/AG78">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <obo:IAO_0000412>https://opendata.inra.fr/AnimalDiseasesOnto/page/Ando</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://opendata.inra.fr/AnimalDiseasesOnto/page/Ando</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">Pasteurella multocida is a bacterial pathogen in cattle associated with respiratory infections, causing pneumonia and other respiratory symptoms.</rdfs:comment>
         <rdfs:label xml:lang="en">PasteurellaMultocida</rdfs:label>
     </owl:Class>
@@ -946,7 +981,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>obo:IAO_0000119  &quot;http://purl.obolibrary.org/obo/iao.owl&quot; .</obo:IAO_0000412>
+        <NCIT:IAO_0000412>obo:IAO_0000119  &quot;http://purl.obolibrary.org/obo/iao.owl&quot; .</NCIT:IAO_0000412>
         <rdfs:comment>An information content entity that specifies how a realizable entity is concretized, and that is not concretized in the specification itself.&quot;</rdfs:comment>
         <rdfs:label>measurement datum</rdfs:label>
     </owl:Class>
@@ -990,7 +1025,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#Event">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000119>http://www.purl.org/decide#Event</obo:IAO_0000119>
+        <NCIT:IAO_0000119>http://www.purl.org/decide#Event</NCIT:IAO_0000119>
         <imported_from>https://bioportal.bioontology.org/ontologies/DECIDE?p=classes</imported_from>
         <rdfs:comment>A class representing any occurrence or activity related to aquaculture or livestock management, such as disease outbreaks, treatments, movements, or inspections.</rdfs:comment>
         <rdfs:label>Event</rdfs:label>
@@ -1002,7 +1037,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#EventType">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=classes</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=classes</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">It refer to different types of events related to livestock or farming. For example, &quot;slaughter&quot; could be one event type, and &quot;birth,&quot; &quot;vaccination,&quot; or &quot;disease outbreak&quot; could be other event types.</rdfs:comment>
     </owl:Class>
     
@@ -1012,7 +1047,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#Farm">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">A farm is an agricultural or aquacultural establishment where crops are cultivated, terrestrial livestock and/or aquatic species (such as fish or shellfish) are raised for food production or other commercial, research, or conservation purposes.</rdfs:comment>
     </owl:Class>
     
@@ -1022,7 +1057,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#Measurement">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment>A record of an observed or measured value related to a specific characteristic (such as weight, age, or temperature) of an animal, population, environment, or system, applicable to both terrestrial livestock and aquaculture species</rdfs:comment>
     </owl:Class>
     
@@ -1032,7 +1067,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#MeasurementType">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment>A classification of measurement, such as weight or age</rdfs:comment>
     </owl:Class>
     
@@ -1042,7 +1077,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#Pathogen">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">A pathogen is a microorganism, such as a bacterium or virus, that causes disease in its host, be it plants, animals, or humans.</rdfs:comment>
         <rdfs:label xml:lang="en">Pathogen</rdfs:label>
     </owl:Class>
@@ -1053,7 +1088,7 @@ Common examples include kilogram (kg), gram (g), and tonne (t).</rdfs:comment>
 
     <owl:Class rdf:about="http://www.purl.org/decide#ProductionCycleTime">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">ProductionCycleTime refers to the duration of a specific production stage or the entire production process in aquaculture or livestock farming. 
 
 It is used to describe the time span from the beginning to the end of a defined stage (e.g., nursery, finishing) or the complete cycle.</rdfs:comment>
@@ -1076,7 +1111,7 @@ It is used to describe the time span from the beginning to the end of a defined 
 
     <owl:Class rdf:about="http://www.purl.org/decide#SampleResult">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">SampleResult represents the outcome or findings derived from analyzing a specimen, providing valuable information about the health or characteristics of the sampled subject, whether it be cattle, pig, poultry, or another source.</rdfs:comment>
         <rdfs:label>SampleResult</rdfs:label>
     </owl:Class>
@@ -1087,7 +1122,7 @@ It is used to describe the time span from the beginning to the end of a defined 
 
     <owl:Class rdf:about="http://www.purl.org/decide#SampleType">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment xml:lang="en">SampleType</rdfs:comment>
         <rdfs:comment xml:lang="en">SampleType describes the kind of material or source from which a sample is collected for analysis. 
 Examples include blood, tissue, feces, milk, water, feed, or environmental swabs. 
@@ -1100,7 +1135,7 @@ It is used to classify samples according to their origin and is essential for in
 
     <owl:Class rdf:about="http://www.purl.org/decide#SpeciesGroup">
         <owl:equivalentClass rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment>SpeciesGroup represents a group of animals belonging to the same species or production category 
     (e.g., Atlantic salmon, broiler chickens, weaned piglets, dairy cattle). 
     It is used to describe the target population involved in events such as sampling, treatment, or observation.</rdfs:comment>
@@ -1112,7 +1147,7 @@ It is used to classify samples according to their origin and is essential for in
 
     <owl:Class rdf:about="http://www.purl.org/decide#Unit">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000119>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000119>
+        <NCIT:IAO_0000119>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000119>
         <imported_from xml:lang="en">http://www.purl.org/decide#Unit</imported_from>
         <rdfs:comment xml:lang="en">The class representing a unit of measurement or denomination. Instances of this class may include various units such as length units, weight units, time units, etc. It serves as a general category for expressing quantitative values in a standardized manner across different domains.</rdfs:comment>
         <rdfs:label>Unit</rdfs:label>
@@ -1124,7 +1159,7 @@ It is used to classify samples according to their origin and is essential for in
 
     <owl:Class rdf:about="http://www.purl.org/decide#Veterinarian">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <obo:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</obo:IAO_0000412>
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/DECIDE?p=summary</NCIT:IAO_0000412>
         <rdfs:comment>A Veterinarian is a qualified and licensed professional responsible for the health and welfare of animals. 
     Veterinarians perform clinical examinations, diagnose diseases, prescribe treatments, and provide guidance on prevention, vaccination, and biosecurity in livestock and aquaculture settings.</rdfs:comment>
     </owl:Class>
@@ -1180,7 +1215,7 @@ It is used to classify samples according to their origin and is essential for in
 
     <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BirthEvent">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#EventType"/>
-        <obo:IAO_0000119>Birth event refers to the occurrence of a living being coming into the world.</obo:IAO_0000119>
+        <NCIT:IAO_0000119>Birth event refers to the occurrence of a living being coming into the world.</NCIT:IAO_0000119>
     </owl:Class>
     
 
@@ -1259,16 +1294,6 @@ It is used to classify samples according to their origin and is essential for in
     
 
 
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS21 -->
-
-    <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS21">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
-        <rdfs:comment xml:lang="en">Represents the prevalence rate of a pathogen in a region/time.</rdfs:comment>
-        <rdfs:label xml:lang="en">PrevalenceObservation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS22 -->
 
     <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS22">
@@ -1315,6 +1340,24 @@ It is used to classify samples according to their origin and is essential for in
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#FarmIdentification"/>
         <rdfs:comment>A unique identifier specific to poultry farms, used for traceability and health monitoring purposes.</rdfs:comment>
         <rdfs:label xml:lang="en">PoultryFarmIdentification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS65 -->
+
+    <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS65">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
+        <rdfs:comment>Prevalence refers to the proportion of a population that has a specific characteristic or condition at a given time. It is often used in public health to indicate how widespread a disease is within a population.</rdfs:comment>
+        <rdfs:label xml:lang="en">Prevelance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS76 -->
+
+    <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS76">
+        <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
     </owl:Class>
     
 
@@ -1594,16 +1637,8 @@ Similarly, for poultry, LHO incorporates FarmType along with specific pathogen n
 
     <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LocalAuthority">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25341"/>
-        <obo:IAO_0000112>For example for Scotland local authority council example areas are Highland, Argyll and Bute, or Glasgow City etc...</obo:IAO_0000112>
+        <NCIT:IAO_0000112>For example for Scotland local authority council example areas are Highland, Argyll and Bute, or Glasgow City etc...</NCIT:IAO_0000112>
         <rdfs:comment>An administrative council area that governs and delivers public services for a defined local community region.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed -->
-
-    <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed">
-        <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#SampleType"/>
     </owl:Class>
     
 
@@ -1719,10 +1754,10 @@ Similarly, for poultry, LHO incorporates FarmType along with specific pathogen n
 
     <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Salmon">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
-        <obo:IAO_0000112>Atlantic salmon (Salmo salar) are frequently farmed in marine cages and monitored for growth, health, and disease events such as sea lice infestation or viral infections.</obo:IAO_0000112>
-        <obo:IAO_0000118>Atlantic salmon
-Pacific salmon</obo:IAO_0000118>
-        <obo:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/page/c_6756</obo:IAO_0000412>
+        <NCIT:IAO_0000112>Atlantic salmon (Salmo salar) are frequently farmed in marine cages and monitored for growth, health, and disease events such as sea lice infestation or viral infections.</NCIT:IAO_0000112>
+        <NCIT:IAO_0000118>Atlantic salmon
+Pacific salmon</NCIT:IAO_0000118>
+        <NCIT:IAO_0000412>https://agrovoc.fao.org/browse/agrovoc/en/page/c_6756</NCIT:IAO_0000412>
         <rdfs:comment>A common name for several species of ray-finned fish in the family Salmonidae, widely farmed in aquaculture systems for food production. Salmon are anadromous, meaning they hatch in freshwater, migrate to the ocean, and return to freshwater to spawn.</rdfs:comment>
         <rdfs:label>Salmon</rdfs:label>
     </owl:Class>
@@ -1733,7 +1768,7 @@ Pacific salmon</obo:IAO_0000118>
 
     <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SalmonSample">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide#Sample"/>
-        <obo:IAO_0000112>SalmonSample is &quot;n&quot; number of observation for Salmon data.</obo:IAO_0000112>
+        <NCIT:IAO_0000112>SalmonSample is &quot;n&quot; number of observation for Salmon data.</NCIT:IAO_0000112>
         <rdfs:comment>A SalmonSample represents a biological sample collected from a salmon individual, associated with pathogen detection, diagnostic tests, and location data, Mortality rate, actual biomass and water type.</rdfs:comment>
     </owl:Class>
     
@@ -1763,6 +1798,8 @@ Pacific salmon</obo:IAO_0000118>
     <owl:Class rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species">
         <rdfs:subClassOf rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LivestockHealthOntology"/>
         <rdfs:comment xml:lang="en">Cattle, pig, and poultry represent distinct species within the animal kingdom commonly raised for agricultural purposes, including meat production.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Livestock species classification</rdfs:comment>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
         <owl:equivalentClass xml:lang="en">http://www.purl.org/decide#SpeciesGroup</owl:equivalentClass>
     </owl:Class>
     
@@ -1869,6 +1906,18 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
+    <!-- http://opendata.inra.fr/AHOL/AHOL_0005015 -->
+
+    <owl:NamedIndividual rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005015"/>
+    
+
+
+    <!-- http://opendata.inra.fr/AHOL/AHOL_0005016 -->
+
+    <owl:NamedIndividual rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005016"/>
+    
+
+
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#ArgyllandBute -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ArgyllandBute">
@@ -1882,6 +1931,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Autopsy">
         <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
     </owl:NamedIndividual>
     
 
@@ -1890,6 +1940,18 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BAL">
         <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#BCV -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BCV">
+        <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005015"/>
+        <rdfs:comment>Bovine Coronavirus (BCV) is a viral pathogen causing respiratory and enteric diseases in cattle.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1898,7 +1960,22 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#BRSV">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
-        <rdfs:comment xml:lang="en">An individual representing a cattle breed of mixed meat and dairy type.</rdfs:comment>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005015"/>
+        <rdfs:comment>Bovine Respiratory Syncytial Virus</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Belgium -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Belgium">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <hasGeographicNeighbor rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#France"/>
+        <hasGeographicNeighbor rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TheNetherlands"/>
+        <rdfs:comment xml:lang="en">Belgium - European country with land borders to France and The Netherlands.</rdfs:comment>
+        <rdfs:label xml:lang="en">Belgium</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1917,7 +1994,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleSample"/>
         <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS06"/>
         <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS07"/>
-        <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS02"/>
         <hasSampleResult rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS04"/>
         <rdfs:comment>An individual type of Sample</rdfs:comment>
         <rdfs:label xml:lang="en">CattleSample01</rdfs:label>
@@ -1928,9 +2004,10 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS02 -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS02">
-        <rdf:type rdf:resource="http://aims.fao.org/aos/agrovoc/c_16398"/>
-        <rdfs:comment>an individual type of pathogen</rdfs:comment>
-        <rdfs:label xml:lang="en">BRSV</rdfs:label>
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <rdfs:comment>Suckler cattle are  breeds raised primarily for meat production, where calves are nursed by their mothers until weaning.</rdfs:comment>
+        <rdfs:label xml:lang="en">Suckler</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1939,6 +2016,8 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS03">
         <rdf:type rdf:resource="http://aims.fao.org/aos/agrovoc/c_35380"/>
+        <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
         <rdfs:comment>An individual type pathogen</rdfs:comment>
         <rdfs:label xml:lang="en">PRRS</rdfs:label>
     </owl:NamedIndividual>
@@ -1969,6 +2048,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS06">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
         <rdfs:comment>an individual type of breed</rdfs:comment>
         <rdfs:label xml:lang="en">Beef</rdfs:label>
     </owl:NamedIndividual>
@@ -1981,6 +2061,52 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiagnosticTest"/>
         <rdfs:comment>an individual (entity) that represent PCR</rdfs:comment>
         <rdfs:label xml:lang="en">PCR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS08">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <rdfs:comment>Veal cattle are young calves (typically under 8 months) raised for veal meat production. Often includes male dairy calves or crossbred calves from dairy herds</rdfs:comment>
+        <rdfs:label xml:lang="en">Veal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS09">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <rdfs:comment>Unknown breed category used when the specific breed information is not available or not recorded in the sample data</rdfs:comment>
+        <rdfs:label xml:lang="en">Unknown</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS19">
+        <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <hasExactSynonym xml:lang="en">Nasopharyngeal Swab</hasExactSynonym>
+        <rdfs:comment>Nasopharyngeal Swab (NPS) is a sample collection method where a swab is inserted through the nostril to collect secretions from the nasopharynx. Commonly used for detecting respiratory pathogens</rdfs:comment>
+        <rdfs:label xml:lang="en">Nps</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS39">
+        <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <hasExactSynonym>Trans-tracheal Aspirate (TTA)</hasExactSynonym>
+        <rdfs:comment>Trans-tracheal Aspirate (TTA) is a diagnostic sample collected by inserting a catheter through the trachea to obtain lower respiratory tract secretions. Used for accurate identification of bacterial pathogens</rdfs:comment>
+        <rdfs:label xml:lang="en">Tta</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2006,7 +2132,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS41">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PoultrySample"/>
-        <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS44"/>
         <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS07"/>
         <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS42"/>
         <CS16>1</CS16>
@@ -2020,18 +2145,19 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS42">
         <rdf:type rdf:resource="http://opendata.inra.fr/AnimalDiseasesOnto/AG509"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment>an individual (entity) that represent Infectious Bronchis pathogen</rdfs:comment>
         <rdfs:label xml:lang="en">IB</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS44 -->
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS46 -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS44">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
-        <rdfs:comment>An idividual or instance shows location</rdfs:comment>
-        <rdfs:label xml:lang="en">Netherland</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS46">
+        <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <rdfs:label xml:lang="en">Missing</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2052,6 +2178,26 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <rdf:type rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005015"/>
         <rdfs:comment>An individual type Disease</rdfs:comment>
         <rdfs:label xml:lang="en">SwineInfluenzaDisease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS50">
+        <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
+        <rdfs:label xml:lang="en">Lawsonia intracellularis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS51">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+        <rdfs:comment>Individual refering Lab number</rdfs:comment>
+        <rdfs:label xml:lang="en">3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2084,6 +2230,75 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS55">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+        <rdfs:comment>Individual refering Lab number</rdfs:comment>
+        <rdfs:label xml:lang="en">4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS61">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+        <rdfs:comment>Individual refering Lab number</rdfs:comment>
+        <rdfs:label xml:lang="en">5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS64">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+        <rdfs:comment>Individual refering Lab number</rdfs:comment>
+        <rdfs:label xml:lang="en">6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS66">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS65"/>
+        <rdfs:comment>The prevalence of Bovine Respiratory Disease (BRD) in cattle varies significantly across different regions, age groups, and diagnostic methods. BRD is estimated to affect 2.1% to 20.2% of cattle, with higher rates observed in winter months. The disease is a leading cause of morbidity and mortality in pre-weaned dairy calves, and its economic impact is substantial, leading to mortality, reduced growth, and lower carcass value.</rdfs:comment>
+        <rdfs:label xml:lang="en">BRD_Prevalence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS67 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS67">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS65"/>
+        <rdfs:comment>The prevalence of Porcine Respiratory Disease Complex (PRDC)</rdfs:comment>
+        <rdfs:label xml:lang="en">PRDC_Prevalence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS76 -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS76">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+        <rdfs:comment xml:lang="en">Bovine species - cattle, cows, calves</rdfs:comment>
+        <rdfs:label xml:lang="en">Cattle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Culture -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Culture">
@@ -2097,6 +2312,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Dairy">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
     </owl:NamedIndividual>
     
 
@@ -2514,11 +2730,33 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#France">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <rdfs:comment xml:lang="en">France - European country with land border to Belgium.</rdfs:comment>
+        <rdfs:label xml:lang="en">France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Gelderland -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Gelderland">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Province"/>
         <rdfs:comment xml:lang="en">An individual representing different Province.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#HS -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#HS">
+        <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005016"/>
+        <rdfs:comment>Histophilus somni (member of the Pasteurellaceae family)</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2676,6 +2914,17 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Ireland -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Ireland">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <rdfs:comment xml:lang="en">Ireland - Island nation with no land borders to other countries in this dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ireland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Lab1CattleSample_0 -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Lab1CattleSample_0">
@@ -2683,7 +2932,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Meat"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TheNetherlands"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#2018-01-01"/>
-        <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR"/>
         <hasLabReference rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#2"/>
         <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PM"/>
         <hasProvince rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Gelderland"/>
@@ -2714,7 +2962,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Lab1CattleSample_2">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CattleSample"/>
-        <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed"/>
+        <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS76"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TheNetherlands"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#2018-01-01"/>
         <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Culture"/>
@@ -2806,9 +3054,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Lab1SalmonSample_1">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SalmonSample"/>
-        <CS56 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#149"/>
         <CS57 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Seawater"/>
-        <CS58 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#1708.1"/>
         <CS60 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ArgyllandBute"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Scotland"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#2024-12-01"/>
@@ -2836,9 +3082,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Lab1SalmonSample_7">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SalmonSample"/>
-        <CS56 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#798"/>
         <CS57 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Seawater"/>
-        <CS58 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#10611.0"/>
         <CS60 rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#EileanSiar"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Scotland"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#2024-12-01"/>
@@ -2854,7 +3098,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Meat"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Spain"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020"/>
-        <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR"/>
         <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mycoplasmahyopneumoniae"/>
         <hasProvince rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Valencia"/>
         <hasSampleType rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue"/>
@@ -2870,7 +3113,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Meat"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Spain"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020"/>
-        <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR"/>
         <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SwineInfluenzaVirus"/>
         <hasProvince rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Valencia"/>
         <hasSampleType rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue"/>
@@ -2886,7 +3128,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Meat"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Spain"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020"/>
-        <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR"/>
         <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mycoplasmahyopneumoniae"/>
         <hasProvince rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Valencia"/>
         <hasSampleType rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue"/>
@@ -2902,7 +3143,6 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
         <hasBreed rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Meat"/>
         <hasCountry rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Spain"/>
         <hasDate rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020"/>
-        <hasDiagnosticTest rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR"/>
         <hasPathogen rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SwineInfluenzaVirus"/>
         <hasProvince rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Madrid"/>
         <hasSampleType rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue"/>
@@ -2920,10 +3160,26 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#MB -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#MB">
+        <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005016"/>
+        <hasExactSynonym>Mycoplasma bovis</hasExactSynonym>
+        <rdfs:comment>Mycoplasma bovis</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#MH -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#MH">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005016"/>
+        <hasExactSynonym>Mannheimia haemolytica</hasExactSynonym>
+        <rdfs:comment>Mannheimia haemolytica (member of the Pasteurellaceae family, two major genotypes (1 and 2))</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2941,6 +3197,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mass">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment xml:lang="en">An individual representing Polutry Pathogen.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -2950,17 +3207,10 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Meat">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment xml:lang="en">An individual representing Breed Type.</rdfs:comment>
-        <rdfs:comment xml:lang="en">An individual representing a Piglet breed which is Meat.</rdfs:comment>
         <rdfs:comment xml:lang="en">An individual representing a cattle breed of mixed meat and dairy type.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Breed"/>
     </owl:NamedIndividual>
     
 
@@ -2969,7 +3219,9 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mycoplasmahyopneumoniae">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
         <rdfs:comment xml:lang="en">An individual representing Pig pathogen.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mycoplasma hyopneumoniae</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2992,10 +3244,15 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR -->
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#PI3 -->
 
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PCR">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#DiagnosticTest"/>
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PI3">
+        <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005015"/>
+        <hasExactSynonym xml:lang="en">PI3</hasExactSynonym>
+        <hasExactSynonym xml:lang="en">Parainfluenza-3</hasExactSynonym>
+        <rdfs:comment xml:lang="en">Parainfluenza-3 Virus (PI3) is a viral respiratory pathogen in cattle belonging to the Paramyxoviridae family. It causes upper respiratory tract infections and is a common contributor to the Bovine Respiratory Disease (BRD) complex.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3004,7 +3261,30 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#PM">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <causesDisease rdf:resource="http://opendata.inra.fr/AHOL/AHOL_0005016"/>
+        <hasExactSynonym xml:lang="en">Pasteurella multocida</hasExactSynonym>
         <rdfs:comment xml:lang="en">An individual representing a cattle breed of mixed meat and dairy type.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+        <rdfs:comment xml:lang="en">Porcine species - pigs, swine</rdfs:comment>
+        <rdfs:label xml:lang="en">Pig</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry -->
+
+    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry">
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Species"/>
+        <rdfs:comment xml:lang="en">Avian species - chickens, turkeys, ducks</rdfs:comment>
+        <rdfs:label xml:lang="en">Poultry</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3013,6 +3293,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#QX">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment xml:lang="en">An individual representing Polutry Pathogen.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -3022,7 +3303,9 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SS">
         <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment xml:lang="en">An individual representing SampleType for Poultry.</rdfs:comment>
+        <rdfs:comment>Unknown breed category used when the specific breed information is not available or not recorded in the sample data</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3031,6 +3314,8 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SWAB">
         <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
         <rdfs:comment>individual for diagnostic test</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -3068,6 +3353,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Spain">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
         <rdfs:comment xml:lang="en">An individual representing different Countries.</rdfs:comment>
         <rdfs:label>Spain</rdfs:label>
     </owl:NamedIndividual>
@@ -3079,6 +3365,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#SwineInfluenzaVirus">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
         <rdfs:comment xml:lang="en">An individual representing Pig pathogen.</rdfs:comment>
+        <rdfs:label>Swine influenza virus</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3087,8 +3374,12 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#TheNetherlands">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25464"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Cattle"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment xml:lang="en">An individual representing Country.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Netherlands - European country with land border to Belgium.</rdfs:comment>
         <rdfs:label>The Netherland</rdfs:label>
+        <rdfs:label xml:lang="en">TheNetherlands</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3097,6 +3388,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue">
         <rdf:type rdf:resource="http://www.purl.org/decide#SampleType"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Pig"/>
     </owl:NamedIndividual>
     
 
@@ -3148,53 +3440,8 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#1 -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#1">
-        <rdf:type rdf:resource="http://www.purl.org/decide#SampleResult"/>
-        <rdfs:comment xml:lang="en">An individual representing pathogen result.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#10611.0 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#10611.0">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mortality"/>
-        <rdfs:comment xml:lang="en">An individual sample representing Salmon Mortality.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#149 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#149">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ActualBiomass"/>
-        <rdfs:comment xml:lang="en">An individual representing Actual biomass of salmon.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#1708.1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#1708.1">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mortality"/>
-        <rdfs:comment xml:lang="en">An individual sample representing Salmon Mortality.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#1815 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#1815">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ActualBiomass"/>
-        <rdfs:comment xml:lang="en">An individual representing Actual biomass of salmon.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#1840 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#1840">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ActualBiomass"/>
-        <rdfs:comment xml:lang="en">An individual representing Actual biomass of salmon.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+        <rdfs:comment xml:lang="en">An individual representing Lab refence</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3203,6 +3450,7 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#2">
         <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#LabReference"/>
+        <rdfs:comment>An individual representing Lab refence</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3233,56 +3481,12 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     
 
 
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#21968.81 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#21968.81">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mortality"/>
-        <rdfs:comment xml:lang="en">An individual sample representing Salmon Mortality.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#575 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#575">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ActualBiomass"/>
-        <rdfs:comment xml:lang="en">An individual representing Actual biomass of salmon.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#5846.0 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#5846.0">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mortality"/>
-        <rdfs:comment xml:lang="en">An individual sample representing Salmon Mortality.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#793B -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#793B">
         <rdf:type rdf:resource="http://www.purl.org/decide#Pathogen"/>
+        <affectsSpecies rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Poultry"/>
         <rdfs:comment xml:lang="en">An individual representing Polutry Pathogen.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#798 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#798">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#ActualBiomass"/>
-        <rdfs:comment xml:lang="en">An individual representing Actual biomass of salmon.</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.purl.org/decide/LiveStockHealthOnto/LHO#820.0 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#820.0">
-        <rdf:type rdf:resource="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mortality"/>
-        <rdfs:comment xml:lang="en">An individual sample representing Salmon Mortality.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3295,6 +3499,15 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005015">
+        <NCIT:IAO_0000412>https://bioportal.bioontology.org/ontologies/AHOL?p=summary</NCIT:IAO_0000412>
+        <rdfs:comment>Viral disease is an illness caused by a virus, where the virus invades living cells to reproduce, often leading to symptoms like fever, cough, or organ damage.</rdfs:comment>
+        <rdfs:label>Viral Disease</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://opendata.inra.fr/AHOL/AHOL_0005016">
+        <rdfs:comment xml:lang="en">Bacterial disease is an illness caused by pathogenic bacteria, such as Mannheimia haemolytica, Pasteurella multocida, Histophilus somni, or Mycoplasma bovis in cattle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bacterial Disease</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Autopsy">
         <rdfs:comment xml:lang="en">An autopsy sample refers to tissues or specimens collected during a post-mortem examination, conducted to investigate the cause of death or study pathological conditions in animals or humans.</rdfs:comment>
     </rdf:Description>
@@ -3304,14 +3517,15 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
     <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Broiler">
         <rdfs:comment>Chicks raised specifically for meat production grow rapidly and are typically processed within 6–8 weeks.</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#CS76">
+        <rdfs:comment>Mixed breed cattle are crossbred animals that do not belong to a single pure breed category. May include dairy-beef crosses or other hybrid breeding combinations</rdfs:comment>
+        <rdfs:label>Mixed</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Dairy">
         <rdfs:comment>Dairy breed refers to a type of livestock, for example cows, that is specifically raised for milk production</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Finishing">
         <rdfs:comment>Finishing stage in pigs is the final growth phase, typically from 10 to 25 weeks of age, where pigs grow from about 20–25 kg to 100–110+ kg before market.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Mixed">
-        <rdfs:comment>A composite sample combining two or more sample types (e.g., blood + swab) for broader diagnostic coverage.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.purl.org/decide/LiveStockHealthOnto/LHO#Tissue">
         <rdfs:comment xml:lang="en">A tissue sample is a specimen composed of cells derived from an organism&apos;s body, collected for diagnostic or research purposes to study cellular structures, functions, or identify potential abnormalities.</rdfs:comment>
@@ -3365,5 +3579,5 @@ By around 3 weeks, they begin nibbling on solid feed alongside milk as they prep
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
