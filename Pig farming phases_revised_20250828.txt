@@ -1,0 +1,59 @@
+
+SAMPLE TYPES
+
+- Tissue: any individual tissue.
+- BAL: tracheobronchial fluid (a special type of fluid).
+- Blood: blood and serum.
+- Faeces: faeces and intestinal contents; stomach contents not included.
+- Fluid: liquids, exudates, and semen.
+- Swab: swabs and scrapings from various sources.
+- Mixed: combination of several samples, even if they are of the same type.
+- Other: FTA cards, culture plates, vaccines, DNA/RNA, environmental samples, etc.
+
+
+
+-------------------
+
+PIG FARMING PHASES
+
+Universally accepted stages in commercial pig farming typically include:
+
+Pig Production Life Cycle Stages:
+1. Breeding (adults)
+1.1 Sow: female pig that has given birth at least once. The transition from gilt to sow occurs after her first farrowing.
+1.2 Boar: male pig for reproduction.
+1.3 Gilt: young female pig that has reached reproductive maturity but has not yet given birth. 
+
+2. Suckling (Birth):
+Description: Piglets are born and nursed by their mother (sow). They are blind, deaf, and hairless initially but develop quickly.
+Characteristics:
+	Piglets weigh 2-3 pounds at birth.
+	Develop teeth and eyesight by 7-10 days.
+	Start consuming solid food alongside milk around 3 weeks.
+
+3. Weaning:
+Description: piglets are separated from their mother. 
+Characteristics:
+	In this process management and health interventions usually take place (vaccination, sampling, etc).
+	It is not a productive phase per se.
+
+4. Nursery:
+Description: piglets are weaned from the sow and housed separately. They receive a specialized diet and socialization.
+Characteristics:
+	They stop nursing and starts eating solid food.
+	Piglets gain weight rapidly.
+	Develop social hierarchy and play behaviour.
+	Vaccinations and other health interventions may occur. 
+	Transition is simply a nursery stage.
+
+5. Finishing:
+Description: pigs are located in another area to fatten and gain weight until they reach the commercial weight for slaughter.
+Characteristics:
+	They grow fast.
+
+Category by age in days/weeks or weight (kg):
+		Days	Weeks	Weight (kg)
+Suckling	0-20	0-2	0-4
+Weaning		21-28	3-4	>4-6
+Nursery		29-70	5-10	>6-<20
+Finishing	>70	>10	20-120
