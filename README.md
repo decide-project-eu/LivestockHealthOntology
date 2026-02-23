@@ -11,6 +11,12 @@
 
 5: Implement a data visualization tool to analyze and report farm animal disease management data, empowering insightful decision-making and data interpretation.
 
+6: Explore disease trend visualization through the https://decide-project-eu.github.io/case-studies-website/case-studies/cattle-barometer.html, which showcases cattle,
+  poultry, and pig barometers that visualize laboratory data on pathogen trends. These tools have the potential to serve as early warning systems and support on-farm
+  decision-making for controlling infectious diseases, including antimicrobial use, vaccination strategies, and animal purchases.
+
+7: This ontology-driven data pipeline has been extended to support predictive modeling through federated learning. A horizontal federated learning approach for Bovine Respiratory Disease (BRD) prediction, built on the standardized ontology-mapped data, is available at https://github.com/Bovi-analytics/ontology_driven_horizontal_federated_learning_BRD.
+
 We've made CattleUse work on three platforms: Python, R, and Pyspark. We did this by using data from different animal health service labs in Europe.
 
 In summary, while the Pyspark implementation was showcased with the Lab1 dataset, the same methodology was followed for the remaining datasets (Lab2, Lab3, Lab4, and Lab5), albeit without a separate Pyspark demonstration. In the 'UnionOfAllRDF.ipynb' notebook, we aggregate RDF data from Lab1, Lab2, Lab3, Lab4, and Lab5. This process involves combining RDF files from these sources into a unified representation. The resulting unified RDF representation is then utilized in visualization tools for example Tableau for comprehensive analysis.
