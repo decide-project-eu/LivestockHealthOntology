@@ -17,6 +17,10 @@
 
 7: This ontology-driven data pipeline has been extended to support predictive modeling through federated learning. A horizontal federated learning approach for Bovine Respiratory Disease (BRD) prediction, built on the standardized ontology-mapped data, is available at https://github.com/Bovi-analytics/ontology_driven_horizontal_federated_learning_BRD.
 
+8: Ontology Reuse and imports: LHO extends the DECIDE ontology as its parent framework and reuses terms from AGROVOC (FAO agricultural vocabulary), AHOL (Animal Health Ontology for
+  Livestock), ANDO (Animal Diseases Ontology) for pathogen and disease classification, NCBI Taxonomy for species classification, and NCIT (NCI Thesaurus) for location and
+   country concepts.
+
 We've made CattleUse work on three platforms: Python, R, and Pyspark. We did this by using data from different animal health service labs in Europe.
 
 In summary, while the Pyspark implementation was showcased with the Lab1 dataset, the same methodology was followed for the remaining datasets (Lab2, Lab3, Lab4, and Lab5), albeit without a separate Pyspark demonstration. In the 'UnionOfAllRDF.ipynb' notebook, we aggregate RDF data from Lab1, Lab2, Lab3, Lab4, and Lab5. This process involves combining RDF files from these sources into a unified representation. The resulting unified RDF representation is then utilized in visualization tools for example Tableau for comprehensive analysis.
