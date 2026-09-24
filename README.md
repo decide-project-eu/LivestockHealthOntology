@@ -1,7 +1,7 @@
 # LivestockHealthOntologyWp1
 ### [![DOI](https://zenodo.org/badge/659116364.svg)](https://zenodo.org/badge/latestdoi/659116364)
 
-### [Tutorial] (https://decide-project-eu.github.io/case-studies-website/tutorials/ontologies.html)
+### [Tutorial](https://decide-project-eu.github.io/case-studies-website/tutorials/ontologies.html)
 ### Publications: [1](https://www.bdspublishing.com/_webedit/uploaded-files/All%20Files/Open%20Access/9781835450536.pdf), [2](https://www.researchgate.net/profile/Saba-Noor-2/publication/385974389_Advancing_precision_livestock_farming_through_ontology-driven_interoperable_health_data_management_Extending_the_Livestock_Health_Ontology_LHO_for_enhanced_disease_surveillance/links/673df620b903016a31ceafe4/Advancing-precision-livestock-farming-through-ontology-driven-interoperable-health-data-management-Extending-the-Livestock-Health-Ontology-LHO-for-enhanced-disease-surveillance.pdf)
 
 # LivestockHealthOntology Mapping 
