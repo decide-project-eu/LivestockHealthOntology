@@ -1,0 +1,2694 @@
+@prefix : <http://www.purl.org/decide/LiveStockHealthOnto/LHO#> .
+@prefix NCIT: <http://purl.obolibrary.org/obo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://aims.fao.org/aos/agrovoc/c_34495> a owl:Class ;
+    rdfs:label "PasteurellaHaemolytica"@en ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/" ;
+    :hasExactSynonym "PH" ;
+    rdfs:comment "Former name of Mannheimia haemolytica (reclassified in 1999); kept because existing data may use either name."@en,
+        "Pasteurella haemolytica is a Gram-negative bacterium associated with respiratory infections, particularly in cattle, causing bovine respiratory disease complex (BRDC) or shipping fever."@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_34495" ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "Pasteurella haemolytica"@ar,
+        "Pasteurella haemolytica"@de,
+        "Pasteurella haemolytica"@en,
+        "pasteurella haemolytica"@en,
+        "Pasteurella haemolytica"@es,
+        "Pasteurella haemolytica"@nl,
+        "Pasteurella haemolytica"@sv .
+
+<http://aims.fao.org/aos/agrovoc/c_6145> a owl:Class ;
+    rdfs:label "Poultry"@en ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/page/c_6145" ;
+    rdfs:comment "All domesticated birds used for the production of meat or eggs for consumption, for the production of other commercial products, for restocking, supplies of game, or for breeding these categories of birds." ;
+    rdfs:subClassOf :Species ;
+    skos:altLabel "دواجن"@ar,
+        "طيور مدجنة"@ar,
+        "Geflügel"@de,
+        "domestizierter Vogel"@de,
+        "domesticated birds"@en,
+        "poultry"@en,
+        "Ave de corral"@es,
+        "Aves domesticas"@es .
+
+<http://aims.fao.org/aos/agrovoc/c_7555> a owl:Class ;
+    rdfs:label "Pig"@en ;
+    NCIT:IAO_0000412 "https://aims.fao.org/aos/agrovoc/c_7555.html" ;
+    rdfs:comment "The pig (Sus domesticus), often called swine, hog, or domestic pig" ;
+    rdfs:subClassOf :Species ;
+    skos:altLabel "خنازير"@ar,
+        "Schwein"@de,
+        "domestic pigs"@en,
+        "hogs"@en,
+        "pig"@en,
+        "pigs"@en,
+        "swine"@en,
+        "Cerdo"@es,
+        "varken"@nl,
+        "gris"@sv,
+        "grisar"@sv,
+        "svin"@sv,
+        "سؤر"@ur ;
+    skos:closeMatch NCIT:NCBITaxon_9823 .
+
+NCIT:IAO_0000027 a owl:Class ;
+    rdfs:label "measurement datum" ;
+    NCIT:IAO_0000412 "obo:IAO_0000119  \"http://purl.obolibrary.org/obo/iao.owl\" ." ;
+    rdfs:comment "An information content entity that specifies how a realizable entity is concretized, and that is not concretized in the specification itself." ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+NCIT:IAO_0000112 a owl:AnnotationProperty ;
+    rdfs:label "example of usage" ;
+    rdfs:comment "A string that provides a usage example of a class, property, or other ontology element to help users understand how it is applied." .
+
+NCIT:IAO_0000117 a owl:AnnotationProperty ;
+    rdfs:label "term editor" ;
+    NCIT:IAO_0000112 "For example, in the context of cattle, breeds can be categorized as meat, dairy, or mixed breeds, each breed for specific agricultural or culinary purposes. Similarly, in the context of poultry, breeds can be categorized as meat breeds or egg-laying breeds. Pigs are also breed for meat production. The 'Breed' class serves as a foundational concept for classifying and organizing various animal breeds within the ontology." ;
+    rdfs:comment "The person primarily responsible for the creation or curation of a given ontology term." .
+
+NCIT:IAO_0000118 a owl:AnnotationProperty ;
+    rdfs:label "alternative term" ;
+    rdfs:comment "A term or phrase that may be used as a synonym or alternate label for a given ontology entity, especially useful for searching and term matching." .
+
+NCIT:IAO_0000119 a owl:AnnotationProperty ;
+    rdfs:label "definition source" ;
+    rdfs:comment "A reference (such as a publication, URL, or ontology) that identifies where the definition of a term originated from." .
+
+NCIT:IAO_0000412 a owl:AnnotationProperty ;
+    rdfs:label "imported from" ;
+    rdfs:comment "An annotation indicating the source ontology or resource from which a given term was imported." .
+
+dc:contributor a owl:AnnotationProperty ;
+    rdfs:comment "Person who contribute to the ontology" .
+
+dcterms:isReplacedBy a owl:AnnotationProperty .
+
+<http://www.ncbi.nlm.nih.gov/taxonomy/9913> a owl:Class ;
+    rdfs:label "Cattle"@en ;
+    rdfs:comment "(domestic cattle)" ;
+    rdfs:subClassOf :Species ;
+    skos:altLabel "ماشية"@ar,
+        "Hausrind"@de,
+        "Rind"@de,
+        "domestic cattle"@en,
+        "Ganado bovino"@es,
+        "rund"@nl,
+        "nötkreatur"@sv,
+        "گائے"@ur .
+
+<http://www.purl.org/decide#Event> a owl:Class ;
+    rdfs:label "Event" ;
+    NCIT:IAO_0000119 "http://www.purl.org/decide#Event" ;
+    :imported_from "https://bioportal.bioontology.org/ontologies/DECIDE?p=classes" ;
+    rdfs:comment "A class representing any occurrence or activity related to aquaculture or livestock management, such as disease outbreaks, treatments, movements, or inspections." ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+<http://www.purl.org/decide#Measurement> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment "A record of an observed or measured value related to a specific characteristic (such as weight, age, or temperature) of an animal, population, environment, or system, applicable to both terrestrial livestock and aquaculture species" ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "قياس"@ar,
+        "Abmessen"@de,
+        "Eichen"@de,
+        "Größenbestimmung"@de,
+        "Messen"@de,
+        "Messung"@de,
+        "gauging"@en,
+        "measuring"@en,
+        "mensuration"@en,
+        "size determination"@en,
+        "Medición"@es,
+        "mätning"@sv .
+
+<http://www.purl.org/decide#SpeciesGroup> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment """SpeciesGroup represents a group of animals belonging to the same species or production category 
+    (e.g., Atlantic salmon, broiler chickens, weaned piglets, dairy cattle). 
+    It is used to describe the target population involved in events such as sampling, treatment, or observation.""" ;
+    owl:equivalentClass :Species .
+
+<http://www.purl.org/decide#Veterinarian> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment """A Veterinarian is a qualified and licensed professional responsible for the health and welfare of animals. 
+    Veterinarians perform clinical examinations, diagnose diseases, prescribe treatments, and provide guidance on prevention, vaccination, and biosecurity in livestock and aquaculture settings.""" ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "أطباء بيطريون"@ar,
+        "Tierarzt"@de,
+        "Veterinär"@de,
+        "veterinarians"@en,
+        "veterinary surgeons"@en,
+        "Veterinario"@es,
+        "veterinärer"@sv ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_8203> .
+
+<http://www.purl.org/decide/LiveStockHealthOnto/LHO> a owl:Ontology ;
+    NCIT:IAO_0000117 "Saba Noor" ;
+    dc:contributor """Saba Noor
+Miel Hostens""" ;
+    :hasExactSynonym "LHO"@en ;
+    rdfs:comment "LHO integrates domain knowledge and data for livestock health. The ontology covers farms, samples, geolocation, breed, diagnostic tests, and pathogen identification, including bacteria like Histophilus somni, Mannheimia haemolytica, Pasteurella multocida, Bovine coronavirus, bacterial mycoplasma, and aerobic culture results in cattle. For pigs, it includes FarmType, age, weight, and pathogens like PRRS, SI and M_Hyponemoniea. In poultry, LHO incorporates FarmType, with specific pathogen names such as Infectious Bronchitis (IB), providing a concise overview of health aspects across livestock species."@en,
+        "https://www.purl.org/decide/LiveStockHealthOnto/LHO"@en ;
+    rdfs:seeAlso """An extension of DECIDE ontology
+
+https://bioportal.bioontology.org/ontologies/DECIDE?p=summary""",
+        "https://bioportal.bioontology.org/ontologies/LHO"@en ;
+    owl:priorVersion "V1.1"@en,
+        "V1.3"@en,
+        "V1.4"@en ;
+    owl:versionIRI <http://www.purl.org/decide/LiveStockHealthOnto/LHO/1.5> ;
+    owl:versionInfo "V1.5"@en ;
+    skos:altLabel "أنطولوجيا صحة الماشية"@ar,
+        "صحة الماشية"@ar,
+        "Ontologie voor veegezondheid"@nl,
+        "Veegezondheidsontologie"@nl,
+        "veegezondheid"@nl,
+        "مویشیوں کی صحت"@ur,
+        "مویشیوں کی صحت کی آنٹولوجی"@ur ;
+    skos:prefLabel "Livestock Health Ontology"@en .
+
+:0 a :ActualBiomass,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing Actual biomass of salmon."@en .
+
+:0.0 a :Mortality,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual sample representing Salmon Mortality."@en .
+
+:1 a :LabReference,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing Lab refence"@en .
+
+:BCV a <http://opendata.inra.fr/AnimalDiseasesOnto/AG34>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "Bovine Coronavirus (BCV) is a viral pathogen causing respiratory and enteric diseases in cattle." ;
+    skos:altLabel "BCoV"@en,
+        "bovine coronavirus"@en .
+
+:Belgium a NCIT:NCIT_C25464,
+        owl:NamedIndividual ;
+    rdfs:label "Belgium"@en ;
+    :affectsSpecies :Cattle ;
+    :hasGeographicNeighbor :France,
+        :TheNetherlands ;
+    rdfs:comment "Belgium - European country with land borders to France and The Netherlands."@en ;
+    skos:altLabel "بلجيكا"@ar,
+        "مملكة بلجيكا"@ar,
+        "Belgien"@de,
+        "Königreich Belgien"@de,
+        "Kingdom of Belgium"@en,
+        "Bélgica"@es,
+        "België"@nl,
+        "Belgien"@sv,
+        "بیلجیئم"@ur .
+
+:BirthEvent a owl:Class ;
+    rdfs:label "BirthEvent"@en ;
+    NCIT:IAO_0000119 "Birth event refers to the occurrence of a living being coming into the world." ;
+    rdfs:comment "Birth event refers to the occurrence of a living being coming into the world."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#EventType> ;
+    skos:altLabel "birth event"@en .
+
+:Blood a owl:Class ;
+    rdfs:comment "Blood is a SampleType. A blood sample is a specimen collected from an organism, typically through venipuncture, and is used for diagnostic or research purposes, providing insights into the health and physiological parameters of the individual."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "دم"@ar,
+        "Blut"@de,
+        "Sangre"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_959> .
+
+:BreedingFarm a owl:Class ;
+    rdfs:comment "A BreedingFarm may focus on breeding and raising animals for specific traits."@en ;
+    rdfs:subClassOf :FarmType .
+
+:CS01 a :CattleSample,
+        owl:NamedIndividual ;
+    rdfs:label "CattleSample01"@en ;
+    :hasBreed :CS06 ;
+    :hasDiagnosticTest :CS07 ;
+    :hasSampleResult :CS04 ;
+    rdfs:comment "An individual type of Sample" .
+
+:CS02 a :Breed,
+        owl:NamedIndividual ;
+    rdfs:label "Suckler"@en ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Suckler cattle are  breeds raised primarily for meat production, where calves are nursed by their mothers until weaning." .
+
+:CS03 a <http://aims.fao.org/aos/agrovoc/c_35380>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    rdfs:label "PRRS"@en ;
+    :affectsSpecies :Pig ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "An individual type pathogen" ;
+    skos:altLabel "المتلازمة التناسلية والتنفسية ع"@ar,
+        "Mystery Swine Disease"@de,
+        "PRRS"@de,
+        "Seuchenhafter Spätabort der Schweine"@de,
+        "PRRSV"@en,
+        "mystery swine disease"@en,
+        "porcine blue miscarriage"@en,
+        "porcine epidemic abortion syndrome"@en,
+        "porcine reproductive and respiratory syndrome"@en,
+        "porcine reproductive and respiratory syndrome virus"@en,
+        "Aborto azul porcino"@es,
+        "Enfermedad misteriosa del cerdo"@es,
+        "SRRP"@es,
+        "Síndrome porcino aborto epidémico"@es,
+        "Síndrome reproductivo y respiratorio porcino"@es .
+
+:CS05 a <http://www.purl.org/decide#SampleResult>,
+        owl:NamedIndividual ;
+    rdfs:label "1"@en ;
+    rdfs:comment "an individual type of sample results" .
+
+:CS08 a :Breed,
+        owl:NamedIndividual ;
+    rdfs:label "Veal"@en ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Veal cattle are young calves (typically under 8 months) raised for veal meat production. Often includes male dairy calves or crossbred calves from dairy herds" .
+
+:CS09 a :Breed,
+        owl:NamedIndividual ;
+    rdfs:label "Unknown"@en ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Unknown breed category used when the specific breed information is not available or not recorded in the sample data" ;
+    skos:altLabel "unknown breed"@en .
+
+:CS10 a owl:DatatypeProperty ;
+    rdfs:label "hasProvincePathogenPrevalence"@en ;
+    rdfs:comment "data type vlaue Represents the prevalence rate of a pathogen in a province." ;
+    rdfs:domain :Province ;
+    rdfs:range xsd:float .
+
+:CS11 a owl:DatatypeProperty ;
+    rdfs:label "hasProvinceNoOfBRD"@en ;
+    rdfs:comment "Count of BRD cases in a province." ;
+    rdfs:domain :Province ;
+    rdfs:range xsd:int .
+
+:CS12 a owl:DatatypeProperty ;
+    rdfs:label "hasCountryPathogenPrevalence"@en ;
+    rdfs:comment "percentage % of cases in a country."@en ;
+    rdfs:domain NCIT:NCIT_C25464 ;
+    rdfs:range xsd:float .
+
+:CS13 a owl:DatatypeProperty ;
+    rdfs:label "hasCountryNoOfBRD"@en ;
+    rdfs:comment "Count of positive  BRD cases in a country." ;
+    rdfs:domain NCIT:NCIT_C25464 ;
+    rdfs:range xsd:int .
+
+:CS14 a owl:DatatypeProperty ;
+    rdfs:label "hasQuarterPathogenPrevalence"@en ;
+    rdfs:comment "% of cases in a quarter." ;
+    rdfs:domain :CS20 ;
+    rdfs:range xsd:float .
+
+:CS15 a owl:DatatypeProperty ;
+    rdfs:label "hasQuarterNoOfBRD"@en ;
+    rdfs:comment "Count of BRD cases in Quarter" ;
+    rdfs:domain :CS20 ;
+    rdfs:range xsd:int .
+
+:CS16 a owl:DatatypeProperty ;
+    rdfs:label "result"@en ;
+    rdfs:comment "A data property that tells whether a sample tested positive (1) or negative (0)." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://www.purl.org/decide#Sample> <http://www.purl.org/decide#SampleResult> ) ] ;
+    rdfs:range xsd:string .
+
+:CS17 a owl:DatatypeProperty ;
+    rdfs:label "date"@en ;
+    rdfs:comment "Date when the sample was collected." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range xsd:date .
+
+:CS18 a owl:DatatypeProperty ;
+    rdfs:label "hasSampleNumber"@en ;
+    rdfs:comment "Unique ID for each sample." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range xsd:string .
+
+:CS19 a :DiagnosticTest,
+        owl:NamedIndividual ;
+    rdfs:label "NPS"@en ;
+    :affectsSpecies :Cattle ;
+    :hasExactSynonym "Nasopharyngeal Swab"@en ;
+    rdfs:comment "Nasopharyngeal Swab (NPS) is a sample collection method where a swab is inserted through the nostril to collect secretions from the nasopharynx. Commonly used for detecting respiratory pathogens" ;
+    skos:altLabel "تقنیة تسـلسـل المسـام النانویة"@ar,
+        "nanopore DNA sequencing"@en,
+        "nanopore sequencing"@en,
+        "Secuenciación de ADN a través de nanoporos"@es,
+        "Secuenciación por nanoporos"@es .
+
+:CS23 a owl:ObjectProperty ;
+    rdfs:label "hasPrevalence"@en ;
+    rdfs:comment "Links a region to pathogen prevalence." ;
+    rdfs:domain NCIT:NCIT_C25341 ;
+    rdfs:range <http://www.purl.org/decide#Pathogen> .
+
+:CS24 a owl:ObjectProperty ;
+    rdfs:label "hasBRDCase"@en ;
+    rdfs:comment "Links a region to BRD case records."@en ;
+    rdfs:domain NCIT:NCIT_C25341 ;
+    rdfs:range :CS22 .
+
+:CS25 a owl:ObjectProperty ;
+    rdfs:label "hasTimePeriod"@en ;
+    rdfs:comment "Links a region to a specific time period." ;
+    rdfs:domain NCIT:NCIT_C25341,
+        :CS26 ;
+    rdfs:range :CS20 .
+
+:CS27 a owl:Class ;
+    rdfs:label "BRDCaseOutbreak"@en ;
+    rdfs:comment "Bovine respiratory disease +ev cases in animal sample  at particualr time and region" ;
+    rdfs:subClassOf :CS26 ;
+    skos:altLabel "brdcase outbreak"@en .
+
+:CS32 a owl:DatatypeProperty ;
+    rdfs:label "hasFlockID"@en ;
+    rdfs:comment "Unique identifier for a flock."@en ;
+    rdfs:domain :CS28 ;
+    rdfs:range xsd:string .
+
+:CS33 a owl:DatatypeProperty ;
+    rdfs:label "hasVetID"@en ;
+    rdfs:comment "Identifier for the veterinarian responsible for the flock." ;
+    rdfs:domain :CS28 ;
+    rdfs:range xsd:string .
+
+:CS34 a owl:DatatypeProperty ;
+    rdfs:label "hasHatchDate"@en ;
+    rdfs:comment "data type for hatching" ;
+    rdfs:domain :CS28 ;
+    rdfs:range xsd:date .
+
+:CS35 a owl:DatatypeProperty ;
+    rdfs:label "hasRemovalDate"@en ;
+    rdfs:comment "Date when the flock was removed from the house or farm." ;
+    rdfs:domain :CS28 ;
+    rdfs:range xsd:date .
+
+:CS36 a owl:DatatypeProperty ;
+    rdfs:label "hasGrowthCurve"@en ;
+    rdfs:comment "Records the growth pattern of the flock over time."@en ;
+    rdfs:domain :CS28 ;
+    rdfs:range xsd:string .
+
+:CS37 a owl:DatatypeProperty ;
+    rdfs:label "hasThinned"@en ;
+    rdfs:comment "A data property that indicates whether the flock has undergone thinning (removal of some birds before full harvest)."@en ;
+    rdfs:domain :CS28 ;
+    rdfs:range xsd:string .
+
+:CS38 a owl:ObjectProperty ;
+    rdfs:label "hasAssociatedFlock"@en ;
+    rdfs:comment "infer farm identification for particular poultry house" ;
+    rdfs:domain :FarmIdentification ;
+    rdfs:range :CS28 ;
+    owl:propertyChainAxiom ( :CS63 :CS29 :CS30 ) .
+
+:CS39 a <http://www.purl.org/decide#SampleType>,
+        owl:NamedIndividual ;
+    rdfs:label "TTA"@en ;
+    :affectsSpecies :Cattle ;
+    :hasExactSynonym "Trans-tracheal Aspirate (TTA)" ;
+    rdfs:comment "Trans-tracheal Aspirate (TTA) is a diagnostic sample collected by inserting a catheter through the trachea to obtain lower respiratory tract secretions. Used for accurate identification of bacterial pathogens" ;
+    skos:altLabel "trans-tracheal aspirate"@en,
+        "transtracheal aspirate"@en .
+
+:CS40 a :CS28,
+        owl:NamedIndividual ;
+    rdfs:label "FlockID_261479"@en ;
+    :CS31 :CS41 ;
+    :CS32 "261479" ;
+    :CS33 "4856405" ;
+    :CS34 "2019-09-05"^^xsd:date ;
+    :CS35 "2019-10-31"^^xsd:date ;
+    :CS36 "ALT" ;
+    :CS37 "1" ;
+    rdfs:comment "is an individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:CS43 a owl:ObjectProperty ;
+    rdfs:label "hasCycleTime"@en ;
+    rdfs:comment "Links a production stage to a concept representing the time duration of that stage." ;
+    rdfs:domain :LivestockProductionStages ;
+    rdfs:range <http://www.purl.org/decide#ProductionCycleTime> .
+
+:CS45 a owl:DatatypeProperty ;
+    rdfs:label "houseNumber"@en ;
+    rdfs:comment "Define data property of house" ;
+    rdfs:domain :CS00 ;
+    rdfs:range xsd:string .
+
+:CS46 a <http://www.purl.org/decide#SampleType>,
+        owl:NamedIndividual ;
+    rdfs:label "Missing"@en ;
+    :affectsSpecies :Cattle ;
+    skos:altLabel "missing sample type"@en .
+
+:CS47 a owl:ObjectProperty ;
+    rdfs:label "causedBy"@en ;
+    rdfs:comment "Disease cause link to pathogen" ;
+    rdfs:domain <http://opendata.inra.fr/AHOL/AHOL_0005001> ;
+    rdfs:range <http://www.purl.org/decide#Pathogen> .
+
+:CS48 a <http://opendata.inra.fr/AHOL/AHOL_0005015>,
+        owl:NamedIndividual ;
+    rdfs:label "BRSVDisease"@en ;
+    rdfs:comment "an individual or instance type of Disease" .
+
+:CS49 a <http://opendata.inra.fr/AHOL/AHOL_0005015>,
+        owl:NamedIndividual ;
+    rdfs:label "SwineInfluenzaDisease"@en ;
+    rdfs:comment "An individual type Disease" .
+
+:CS50 a <http://aims.fao.org/aos/agrovoc/c_36450>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    rdfs:label "Lawsonia intracellularis"@en ;
+    :affectsSpecies :Pig ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005012> ;
+    skos:altLabel "لوسونيا خلوية ضمنية"@ar,
+        "Lawsonia intracellularis"@de,
+        "Ileal symbiont intracellularis"@en,
+        "Lawsonia intracellularis"@es,
+        "Lawsonia intracellularis"@nl,
+        "Lawsonia intracellularis"@sv .
+
+:CS51 a :LabReference,
+        owl:NamedIndividual ;
+    rdfs:label "3"@en ;
+    rdfs:comment "Individual refering Lab number" .
+
+:CS52 a :WaterType,
+        owl:NamedIndividual ;
+    rdfs:label "Freshwater"@en ;
+    skos:altLabel "ماء عذب"@ar,
+        "Süßwasser"@de,
+        "fresh water"@en,
+        "sweet water"@en,
+        "Agua dulce"@es .
+
+:CS53 a <http://aims.fao.org/aos/agrovoc/c_2c550294>,
+        owl:NamedIndividual ;
+    rdfs:label "ISAV"@en ;
+    :affectsSpecies :Salmon ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "Infectious salmon anaemia virus (ISAV), causing a serious viral disease in farmed Atlantic salmon."@en ;
+    skos:altLabel "salmon isavirus"@ar,
+        "فيروس فقر الدم السلموني المعدي"@ar,
+        "Salmon isavirus"@de,
+        "Salmon isavirus"@en,
+        "infectious salmon anaemia virus"@en,
+        "infectious salmon anemia virus"@en,
+        "salmon isavirus"@en,
+        "Salmon isavirus"@es,
+        "Salmon isavirus"@nl .
+
+:CS54 a <http://opendata.inra.fr/AHOL/AHOL_0005001>,
+        owl:NamedIndividual ;
+    rdfs:label "SeaLiceInfestation"@en ;
+    rdfs:comment "An individual that represent an infectious disease in salmon caused by parasitic copepods Lepeophtheirus salmonis" .
+
+:CS55 a :LabReference,
+        owl:NamedIndividual ;
+    rdfs:label "4"@en ;
+    rdfs:comment "Individual refering Lab number" .
+
+:CS56 a owl:ObjectProperty ;
+    rdfs:label "hasActualBiomass"@en ;
+    dcterms:isReplacedBy :CS91 ;
+    rdfs:comment "Object property linked Salmon sample with Actual Biomass property",
+        "Deprecated in V1.5: use the data property actualBiomass (CS91) with a numeric value."@en ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :ActualBiomass ;
+    owl:deprecated true .
+
+:CS57 a owl:ObjectProperty ;
+    rdfs:label "hasWaterType"@en ;
+    rdfs:comment "object property that link Salmon sample with water type for eaxmple Freshwater, Seawater, BrackishWater" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :WaterType .
+
+:CS58 a owl:ObjectProperty ;
+    rdfs:label "hasMortality"@en ;
+    dcterms:isReplacedBy :CS59 ;
+    rdfs:comment "Object property that links a Salmon sample with the mortality recorded for that sample.",
+        "Deprecated in V1.5: use the data property mortality (CS59) with a numeric value."@en ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :Mortality ;
+    owl:deprecated true .
+
+:CS60 a owl:ObjectProperty ;
+    rdfs:label "hasLocalAuthority"@en ;
+    rdfs:comment "Object property that link physical region or location" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :LocalAuthority .
+
+:CS61 a :LabReference,
+        owl:NamedIndividual ;
+    rdfs:label "5"@en ;
+    rdfs:comment "Individual refering Lab number" .
+
+:CS64 a :LabReference,
+        owl:NamedIndividual ;
+    rdfs:label "6"@en ;
+    rdfs:comment "Individual refering Lab number" .
+
+:CS66 a :CS65,
+        owl:NamedIndividual ;
+    rdfs:label "BRD_Prevalence"@en ;
+    rdfs:comment "The prevalence of Bovine Respiratory Disease (BRD) in cattle varies significantly across different regions, age groups, and diagnostic methods. BRD is estimated to affect 2.1% to 20.2% of cattle, with higher rates observed in winter months. The disease is a leading cause of morbidity and mortality in pre-weaned dairy calves, and its economic impact is substantial, leading to mortality, reduced growth, and lower carcass value." .
+
+:CS67 a :CS65,
+        owl:NamedIndividual ;
+    rdfs:label "PRDC_Prevalence"@en ;
+    rdfs:comment "The prevalence of Porcine Respiratory Disease Complex (PRDC)" .
+
+:CS90 a <http://www.purl.org/decide#SampleType>,
+        owl:NamedIndividual ;
+    rdfs:label "Unknown"@en ;
+    :affectsSpecies :Cattle ;
+    skos:altLabel "unknown sample type"@en .
+
+:CattleFinishing a owl:Class ;
+    rdfs:label "CattleFinishing"@en ;
+    rdfs:comment "Finishing is the final production stage in which cattle are fed to reach market weight prior to slaughter." ;
+    rdfs:subClassOf :CattleProductionStages ;
+    skos:altLabel "تسمين"@ar,
+        "Ausmast"@de,
+        "Mast"@de,
+        "cattle finishing"@en,
+        "fattening"@en,
+        "Ceba"@es,
+        "Engorde"@es,
+        "gödning"@sv ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_2817> .
+
+:CattleGrowing a owl:Class ;
+    rdfs:label "CattleGrowing"@en ;
+    rdfs:comment "Growing is an intermediate stage of beef cattle production, occurring after weaning and before finishing, during which animals continue to gain weight and develop." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Beef ;
+            owl:onProperty :hasBreed ],
+        :CattleProductionStages ;
+    skos:altLabel "cattle growing"@en .
+
+:CattleSuckling a owl:Class ;
+    rdfs:label "CattleSuckling"@en ;
+    rdfs:comment "The suckling stage refers to the period during which a calf remains with and nurses from its dam prior to weaning." ;
+    rdfs:subClassOf :CattleProductionStages ;
+    skos:altLabel "رضاعة"@ar,
+        "Säugen"@de,
+        "cattle suckling"@en,
+        "suckling"@en,
+        "Lactancia"@es,
+        "Lactancia natural"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_7493> .
+
+:CattleWeaning a owl:Class ;
+    rdfs:label "CattleWeaning"@en ;
+    rdfs:comment "Weaning is the stage at which a calf is separated from its dam and transitions from nursing to independent feeding." ;
+    rdfs:subClassOf :CattleProductionStages ;
+    skos:altLabel "فطام"@ar,
+        "Absetzen"@de,
+        "cattle weaning"@en,
+        "weaning"@en,
+        "Destete"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_15291> .
+
+:Day a owl:Class ;
+    rdfs:comment "A unit of time equal to 24 hours, used for short-term measurements or daily records" ;
+    rdfs:subClassOf :TimeUnit .
+
+:FarmID_1646742 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_1646742"@en ;
+    :CS63 :Farm_38423 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_1729635 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_1729635"@en ;
+    :CS63 :Farm_38615 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_1761167 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_1761167"@en ;
+    :CS63 :Farm_39105 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_1977700 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_1977700"@en ;
+    :CS63 :Farm_39488 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_2214740 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_2214740"@en ;
+    :CS63 :Farm_39044 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_2752546 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_2752546"@en ;
+    :CS63 :Farm_38236 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_2811332 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_2811332"@en ;
+    :CS63 :Farm_40981 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_6369989 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_6369989"@en ;
+    :CS63 :Farm_38543 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:FarmID_946937 a :FarmIdentification,
+        owl:NamedIndividual ;
+    rdfs:label "FarmID_946937"@en ;
+    :CS63 :Farm_40458 ;
+    rdfs:comment "This is a general Farm ID"@en .
+
+:Feces a owl:Class ;
+    rdfs:comment "A sample of solid waste (stool) used to detect gastrointestinal pathogens, parasites, or digestive disorders." ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "روث"@ar,
+        "Faeces"@de,
+        "Fäkalien"@de,
+        "Kot"@de,
+        "excrements"@en,
+        "faeces"@en,
+        "Hez"@es,
+        "Materias fecales"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_2772> .
+
+:FeedLot a owl:Class ;
+    rdfs:comment "A Feedlot typically emphasizes the finishing stage of livestock for meat production,"@en ;
+    rdfs:subClassOf :FarmType ;
+    skos:altLabel "Feedlot"@de,
+        "Fütterungsgehege"@de,
+        "feed yards"@en,
+        "feedlots"@en,
+        "Feedlot"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_2842> .
+
+:FlockID_273330 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "273330" ;
+    :CS33 "164846" ;
+    :CS34 "2020-03-31"^^xsd:date ;
+    :CS35 "2020-05-13"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:Fluid a owl:Class ;
+    rdfs:comment "A general term for bodily fluids (e.g., urine, pleural fluid, synovial fluid) used to test for infections or other abnormalities." ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "سوائل الجسم"@ar,
+        "Körperflüssigkeit"@de,
+        "body fluids"@en,
+        "Fluidos del cuerpo"@es,
+        "Líquido corporal"@es,
+        "Secreciones del cuerpo"@es .
+
+:H1N1 a owl:Class ;
+    rdfs:comment "H1N1 is a subtype of the influenza a virus, and it has been responsible for influenza outbreaks in both humans and pigs. In the context of livestock health ontology or any ontology dealing with diseases, H1N1 would be classified as a pathogen."@en ;
+    rdfs:subClassOf <http://aims.fao.org/aos/agrovoc/c_6214dcad> ;
+    skos:altLabel "influenza A virus subtype H1N1"@en .
+
+:H1N2 a owl:Class ;
+    rdfs:comment "H1N2 is a swine influenza subtype, resulting from the reassortment of genetic material from human, swine, and avian influenza viruses." ;
+    rdfs:subClassOf <http://aims.fao.org/aos/agrovoc/c_6214dcad> ;
+    skos:altLabel "influenza A virus subtype H1N2"@en .
+
+:H3N2 a owl:Class ;
+    rdfs:comment "H3N2 is a subtype of the influenza a virus"@en ;
+    rdfs:subClassOf <http://aims.fao.org/aos/agrovoc/c_6214dcad> ;
+    skos:altLabel "influenza A virus subtype H3N2"@en .
+
+:HS a <http://aims.fao.org/aos/agrovoc/c_33359>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005012> ;
+    rdfs:comment "Histophilus somni (member of the Pasteurellaceae family)" ;
+    skos:altLabel "Haemophilus somnus"@ar,
+        "Haemophilus somnus"@de,
+        "Histophilus ovis"@de,
+        "Haemophilus somnus"@en,
+        "Histophilus ovis"@en,
+        "Histophilus somni"@en,
+        "Haemophilus somnus"@es,
+        "Histophilus ovis"@es,
+        "Haemophilus somnus"@nl,
+        "Histophilus somni"@nl,
+        "Haemophilus somnus"@sv .
+
+:Ireland a NCIT:NCIT_C25464,
+        owl:NamedIndividual ;
+    rdfs:label "Ireland"@en ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Ireland - Island nation with no land borders to other countries in this dataset."@en ;
+    skos:altLabel "إيرلندا"@ar,
+        "إيري"@ar,
+        "الجمهورية الإرلندية"@ar,
+        "Irland"@de,
+        "Eire"@en,
+        "Irish Republic"@en,
+        "Irlanda"@es,
+        "Ierland"@nl,
+        "Irland"@sv,
+        "جمہوریہ آئرلینڈ"@ur .
+
+:Lab1CattleSample_0 a :CattleSample,
+        owl:NamedIndividual ;
+    :hasBreed :Beef ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2018-01-01 ;
+    :hasLabReference :2 ;
+    :hasPathogen :PM ;
+    :hasProvince :Gelderland ;
+    :hasSampleType :Autopsy ;
+    rdfs:comment "An individual representing a sample from a cattle."@en .
+
+:Lab1CattleSample_1 a :CattleSample,
+        owl:NamedIndividual ;
+    :hasBreed :Dairy ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2018-01-01 ;
+    :hasDiagnosticTest :Culture ;
+    :hasLabReference :2 ;
+    :hasPathogen :BRSV ;
+    :hasProvince :Gelderland ;
+    :hasSampleType :BAL ;
+    rdfs:comment "An individual representing a sample from a cattle."@en .
+
+:Lab1CattleSample_2 a :CattleSample,
+        owl:NamedIndividual ;
+    :hasBreed :CS76 ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2018-01-01 ;
+    :hasDiagnosticTest :Culture ;
+    :hasLabReference :2 ;
+    :hasPathogen :MH ;
+    :hasProvince :NorthBrabant ;
+    :hasSampleType :Swab ;
+    rdfs:comment "An individual representing a sample from a cattle."@en .
+
+:Lab1PoultrySample_0 a :PoultrySample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2014-Q1 ;
+    :hasPathogen :QX ;
+    :hasProvince :Noord-Brabant ;
+    :hasSampleType :SS ;
+    rdfs:comment "An individual representing a sample from a Poultry or Chicken."@en .
+
+:Lab1PoultrySample_1 a :PoultrySample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2014-Q1 ;
+    :hasPathogen :793B ;
+    :hasProvince :Limburg ;
+    :hasSampleType :SS ;
+    rdfs:comment "An individual representing a sample from a Poultry or Chicken."@en .
+
+:Lab1PoultrySample_2 a :PoultrySample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2014-Q1 ;
+    :hasPathogen :Mass ;
+    :hasProvince :Limburg ;
+    :hasSampleType :SS ;
+    rdfs:comment "An individual representing a sample from a Poultry or Chicken."@en .
+
+:Lab1PoultrySample_3 a :PoultrySample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :TheNetherlands ;
+    :hasDate :2014-Q1 ;
+    :hasPathogen :QX ;
+    :hasProvince :Noord-Brabant ;
+    :hasSampleType :SS ;
+    rdfs:comment "An individual representing a sample from a Poultry or Chicken."@en .
+
+:Lab1SalmonSample_0 a :SalmonSample,
+        owl:NamedIndividual ;
+    :CS57 :Seawater ;
+    :CS59 0.0 ;
+    :CS60 :Highland ;
+    :CS91 0.0 ;
+    :hasCountry :Scotland ;
+    :hasDate :2024-12-01 ;
+    rdfs:comment "An individual representing a sample from a Salmon."@en .
+
+:Lab1SalmonSample_1 a :SalmonSample,
+        owl:NamedIndividual ;
+    :CS57 :Seawater ;
+    :CS60 :ArgyllandBute ;
+    :hasCountry :Scotland ;
+    :hasDate :2024-12-01 ;
+    rdfs:comment "An individual representing a sample from a Salmon."@en .
+
+:Lab1SalmonSample_4 a :SalmonSample,
+        owl:NamedIndividual ;
+    :CS57 :Seawater ;
+    :CS59 0.0 ;
+    :CS60 :ShetlandIslands ;
+    :CS91 0.0 ;
+    :hasCountry :Scotland ;
+    :hasDate :2024-12-01 ;
+    rdfs:comment "An individual representing a sample from a Salmon."@en .
+
+:Lab1SalmonSample_7 a :SalmonSample,
+        owl:NamedIndividual ;
+    :CS57 :Seawater ;
+    :CS60 :EileanSiar ;
+    :hasCountry :Scotland ;
+    :hasDate :2024-12-01 ;
+    rdfs:comment "An individual representing a sample from a Salmon."@en .
+
+:Lab4PigSample_0 a :PigSample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :Spain ;
+    :hasDate <http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020> ;
+    :hasPathogen :Mycoplasmahyopneumoniae ;
+    :hasProvince :Valencia ;
+    :hasSampleType :Tissue ;
+    rdfs:comment "An individual representing a sample from a Pig and Piglets."@en .
+
+:Lab4PigSample_1 a :PigSample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :Spain ;
+    :hasDate <http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020> ;
+    :hasPathogen :SwineInfluenzaVirus ;
+    :hasProvince :Valencia ;
+    :hasSampleType :Tissue ;
+    rdfs:comment "An individual representing a sample from a Pig and Piglets."@en .
+
+:Lab4PigSample_2 a :PigSample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :Spain ;
+    :hasDate <http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020> ;
+    :hasPathogen :Mycoplasmahyopneumoniae ;
+    :hasProvince :Valencia ;
+    :hasSampleType :Tissue ;
+    rdfs:comment "An individual representing a sample from a Pig and Piglets."@en .
+
+:Lab4PigSample_3 a :PigSample,
+        owl:NamedIndividual ;
+    :hasBreed :Meat ;
+    :hasCountry :Spain ;
+    :hasDate <http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020> ;
+    :hasPathogen :SwineInfluenzaVirus ;
+    :hasProvince :Madrid ;
+    :hasSampleType :Tissue ;
+    rdfs:comment "An individual representing a sample from a Pig and Piglets."@en .
+
+:MB a <http://aims.fao.org/aos/agrovoc/c_27241>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005012> ;
+    :hasExactSynonym "Mycoplasma bovis" ;
+    rdfs:comment "Mycoplasma bovis" ;
+    skos:altLabel "Mycoplasma bovis"@ar,
+        "مفطورة بقرية"@ar,
+        "Mycoplasma bovis"@de,
+        "Mycoplasma bovis"@en,
+        "Mycoplasma bovis"@es,
+        "Mycoplasma bovis"@nl,
+        "Mycoplasma bovis"@sv .
+
+:Month a owl:Class ;
+    rdfs:comment "A time unit based on calendar months, typically used for monthly reporting or trends." ;
+    rdfs:subClassOf :TimeUnit .
+
+:PI3 a <http://www.purl.org/decide#Pathogen>,
+        :PathogenicVirus,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    :hasExactSynonym "PI3"@en,
+        "Parainfluenza-3"@en ;
+    rdfs:comment "Parainfluenza-3 Virus (PI3) is a viral respiratory pathogen in cattle belonging to the Paramyxoviridae family. It causes upper respiratory tract infections and is a common contributor to the Bovine Respiratory Disease (BRD) complex."@en ;
+    skos:altLabel "فيروس نظير الانفلونزا"@ar,
+        "Parainfluenzavirus"@de,
+        "BPIV-3"@en,
+        "Bovine respirovirus 3"@en,
+        "bovine parainfluenza virus 3"@en,
+        "parainfluenza virus"@en,
+        "parainfluenza virus 3"@en,
+        "Virus paragripal"@es,
+        "Bovine respirovirus 3"@nl ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_13105> .
+
+:SeaLice a <http://aims.fao.org/aos/agrovoc/c_26545>,
+        owl:NamedIndividual ;
+    rdfs:label "Lepeophtheirus salmonis"@en ;
+    :affectsSpecies :Salmon ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005014> ;
+    :hasExactSynonym "salmon louse"@en,
+        "sea lice"@en ;
+    rdfs:comment "Sea lice (Lepeophtheirus salmonis), a parasitic copepod of farmed Atlantic salmon."@en ;
+    skos:altLabel "Lepeophtheirus salmonis"@ar,
+        "Lepeophtheirus salmonis"@de,
+        "salmon louse"@en,
+        "sea lice"@en,
+        "Lepeophtheirus salmonis"@es,
+        "Lepeophtheirus salmonis"@nl,
+        "Lepeophtheirus salmonis"@sv .
+
+:SlaughterEvent a owl:Class ;
+    rdfs:comment "Slaughter event refers to the process of killing animals, usually for meat production or other purposes." ;
+    rdfs:subClassOf <http://www.purl.org/decide#EventType> ;
+    skos:altLabel "قصابة"@ar,
+        "Schlachten"@de,
+        "Töten von Vieh"@de,
+        "butchering"@en,
+        "killing of livestock"@en,
+        "slaughtering"@en,
+        "Matanza de ganado"@es,
+        "Sacrificio"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_7107> .
+
+:VaccinationEvent a owl:Class ;
+    rdfs:comment "Vaccination event refers to the process of giving vaccines to individuals or animals to protect them from specific diseases." ;
+    rdfs:subClassOf <http://www.purl.org/decide#EventType> ;
+    skos:altLabel "تلقيح"@ar,
+        "Impfung"@de,
+        "vaccination"@en,
+        "Vacunación"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_15123> .
+
+:Year a owl:Class ;
+    rdfs:comment "A unit of time representing 12 months, often used for annual summaries or long-term analysis." ;
+    rdfs:subClassOf :TimeUnit .
+
+:affectsSpecies a owl:ObjectProperty ;
+    rdfs:label "affectsSpecies"@en ;
+    rdfs:comment "Links a pathogen, breed, sample type, or country to the species it applies to. Used to filter species-specific categories in a multi-species ontology."@en ;
+    rdfs:domain owl:Thing ;
+    rdfs:range :Species .
+
+:breed a owl:DatatypeProperty ;
+    rdfs:comment "data type that Represents breed like beef, mixed, Veal, suckler" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range xsd:string .
+
+:causesDisease a owl:ObjectProperty ;
+    rdfs:label "causesDisease"@en ;
+    rdfs:comment "Links a pathogen to the type of disease it causes. Used to classify pathogens into Viral or Bacterial groups for graph construction."@en ;
+    rdfs:domain <http://www.purl.org/decide#Pathogen> ;
+    rdfs:range <http://opendata.inra.fr/AHOL/AHOL_0005001> .
+
+:country a owl:DatatypeProperty ;
+    rdfs:comment "Data type Country naming type string" ;
+    rdfs:domain NCIT:NCIT_C25464 ;
+    rdfs:range xsd:string .
+
+:hasAge a owl:ObjectProperty ;
+    rdfs:comment "link a sample to age Unit" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :Age .
+
+:hasCountry a owl:ObjectProperty ;
+    rdfs:comment "Sample belong to which country" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range NCIT:NCIT_C25464 .
+
+:hasDate a owl:ObjectProperty ;
+    rdfs:comment "animal sample date" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :Date .
+
+:hasDiagnosticTest a owl:ObjectProperty ;
+    rdfs:comment "Links a sample to a test performed." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :DiagnosticTest .
+
+:hasEventType a owl:ObjectProperty ;
+    rdfs:comment "link sample to event at which it perform" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range <http://www.purl.org/decide#EventType> .
+
+:hasExactSynonym a owl:AnnotationProperty ;
+    rdfs:comment "Exact synonyms are words that have completely identical or nearly identical meanings in given contexts" .
+
+:hasFarmIdentification a owl:ObjectProperty ;
+    rdfs:comment "Links a sample or a farm to unique farm ID" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <http://www.purl.org/decide#Farm> <http://www.purl.org/decide#Sample> ) ] ;
+    rdfs:range :FarmIdentification .
+
+:hasFarmType a owl:ObjectProperty ;
+    rdfs:comment "link sample to the farm type" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :FarmType .
+
+:hasFinishingDate a owl:DatatypeProperty ;
+    rdfs:label "hasFinishingDate"@en ;
+    rdfs:comment "Date on which cattle entered the finishing stage." ;
+    rdfs:domain :CattleSample ;
+    rdfs:range xsd:date .
+
+:hasGeographicNeighbor a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "hasGeographicNeighbor"@en ;
+    rdfs:comment "Symmetric property indicating two countries share a geographic land border. Used to create geographic adjacency edges in the knowledge graph."@en ;
+    rdfs:domain NCIT:NCIT_C25464 ;
+    rdfs:range NCIT:NCIT_C25464 .
+
+:hasLabReference a owl:ObjectProperty ;
+    rdfs:comment "Link Lab reference,for identification and tracking within a laboratory or data system if Farm Identification is not available" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :LabReference .
+
+:hasPathogen a owl:ObjectProperty ;
+    rdfs:comment "link sample to specific pathogen" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range <http://www.purl.org/decide#Pathogen> .
+
+:hasProductionStages a owl:ObjectProperty ;
+    rdfs:label "hasProductionStages"@en ;
+    rdfs:comment "Links a sample to the production stage of the animal or group it was taken from, for example Nursery, Finishing or Broiler."@en ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :LivestockProductionStages .
+
+:hasProvince a owl:ObjectProperty ;
+    rdfs:comment "link sample to region" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :Province .
+
+:hasResult a owl:ObjectProperty ;
+    rdfs:label "hasResult"@en ;
+    rdfs:comment "Links a sample to its test result, positive (1) or negative (0). This is the property used in the RDF data of the Cattle, Pig and Poultry Barometers. It is a subproperty of hasSampleResult."@en ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:subPropertyOf :hasSampleResult .
+
+:hasSampleNumber a owl:ObjectProperty ;
+    rdfs:comment "link sample to its unique sample Number if available" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :SampleNumber .
+
+:hasSampleType a owl:ObjectProperty ;
+    rdfs:comment "Associates a Sample with a SampleType indicating the kind of material collected, such as blood, tissue, feces, or water." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range <http://www.purl.org/decide#SampleType> .
+
+:hasTimeUnit a owl:ObjectProperty ;
+    rdfs:comment "Linking Animal age with TimeUnit",
+        "Time unit like Months, days, minutes etc..." ;
+    rdfs:domain :Age ;
+    rdfs:range :TimeUnit .
+
+:hasWeaningDate a owl:DatatypeProperty ;
+    rdfs:label "hasWeaningDate"@en ;
+    rdfs:comment "Date on which a calf was weaned." ;
+    rdfs:domain :CattleSample ;
+    rdfs:range xsd:date .
+
+:hasWeight a owl:ObjectProperty ;
+    rdfs:comment "link animal sample weight" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :Weight .
+
+:hasWeightUnit a owl:ObjectProperty ;
+    rdfs:comment """A unit of measurement used to express the weight or mass of an animal, feed, or product. 
+Common examples include kilogram (kg), gram (g), and tonne (t)."""@en ;
+    rdfs:domain :Weight ;
+    rdfs:range :WeightUnit .
+
+:imported_from a owl:AnnotationProperty ;
+    rdfs:comment "resource from where ontology is imported" .
+
+:pathogen a owl:DatatypeProperty ;
+    rdfs:comment "A data property that discribes  a name of the pathogen in animal sample" ;
+    rdfs:domain <http://www.purl.org/decide#Pathogen> ;
+    rdfs:range xsd:string .
+
+:version a owl:AnnotationProperty ;
+    rdfs:comment "version of ontology" ;
+    rdfs:subPropertyOf rdfs:comment .
+
+owl:equivalentClass a owl:AnnotationProperty .
+
+skos:altLabel a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty .
+
+<http://aims.fao.org/aos/agrovoc/c_16398> a owl:Class ;
+    rdfs:label "BovineRespiratorySyncytialVirus"@en ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/" ;
+    :hasExactSynonym "BRSV"@en ;
+    rdfs:comment "Bovine Respiratory Syncytial Virus (BRSV) is a major cause of respiratory disease in cattle, characterized by coughing, nasal discharge, and increased respiratory rate."@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_16398"@en ;
+    rdfs:subClassOf :PathogenicVirus ;
+    skos:altLabel "فيروس الخلايا التنفسية البقرية"@ar,
+        "Bovines respirator syncytialvirus"@de,
+        "BRSV"@en,
+        "Bovine orthopneumovirus"@en,
+        "bovine respiratory syncytial virus"@en,
+        "Virus sincitial respiratorio bovino"@es,
+        "Bovine orthopneumovirus"@nl .
+
+<http://aims.fao.org/aos/agrovoc/c_26545> a owl:Class ;
+    rdfs:label "Lepeophtheirus salmonis" ;
+    rdfs:comment "Lepeophtheirus salmonis (Sea Lice): A parasitic copepod that infests salmon, causing significant issues in aquaculture" ;
+    rdfs:seeAlso "https://www.gbif.org/species/165408210" ;
+    rdfs:subClassOf :Parasite ;
+    skos:altLabel "Lepeophtheirus salmonis"@ar,
+        "Lepeophtheirus salmonis"@de,
+        "salmon louse"@en,
+        "sea lice"@en,
+        "Lepeophtheirus salmonis"@es,
+        "Lepeophtheirus salmonis"@nl,
+        "Lepeophtheirus salmonis"@sv .
+
+<http://aims.fao.org/aos/agrovoc/c_27241> a owl:Class ;
+    rdfs:label "MycoplasmaBovis"@en ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/" ;
+    :hasExactSynonym "MB" ;
+    rdfs:comment "Mycoplasma bovis is a bacterial pathogen that primarily affects cattle, causing respiratory disease, arthritis, mastitis, and other systemic infections."@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_27241" ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "Mycoplasma bovis"@ar,
+        "مفطورة بقرية"@ar,
+        "Mycoplasma bovis"@de,
+        "Mycoplasma bovis"@en,
+        "mycoplasma bovis"@en,
+        "Mycoplasma bovis"@es,
+        "Mycoplasma bovis"@nl,
+        "Mycoplasma bovis"@sv .
+
+<http://aims.fao.org/aos/agrovoc/c_27245> a owl:Class ;
+    rdfs:label "MycoplasmaHyopneumoniae"@en ;
+    :hasExactSynonym "M.Hyopneumoniae",
+        "M_Hyopneumoniae"@en ;
+    rdfs:comment "Mycoplasma hyopneumoniae is a bacterium causing swine enzootic pneumonia, a respiratory disease in pigs, characterized by coughing and impaired respiratory function."@en ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "Mycoplasma hyopneumoniae"@ar,
+        "مفطورة رئوية خنزيرية"@ar,
+        "Mycoplasma hyopneumoniae"@de,
+        "M. hyopneumoniae"@en,
+        "Mycoplasma hyopneumoniae"@en,
+        "mycoplasma hyopneumoniae"@en,
+        "Mycoplasma hyopneumoniae"@es,
+        "Mycoplasma hyopneumoniae"@nl,
+        "Mycoplasma hyopneumoniae"@sv .
+
+<http://aims.fao.org/aos/agrovoc/c_2c550294> a owl:Class ;
+    rdfs:label "InfectiousSalmonAnemiaVirus" ;
+    NCIT:IAO_0000412 "ISAV",
+        "https://agrovoc.fao.org/browse/agrovoc/en/" ;
+    :hasExactSynonym "Infectious salmon anaemia" ;
+    rdfs:comment "Causes Infectious Salmon Anemia (ISA), a serious viral disease in Atlantic salmon" ;
+    rdfs:subClassOf :PathogenicVirus ;
+    skos:altLabel "salmon isavirus"@ar,
+        "فيروس فقر الدم السلموني المعدي"@ar,
+        "Salmon isavirus"@de,
+        "ISAV"@en,
+        "Salmon isavirus"@en,
+        "infectious salmon anaemia virus"@en,
+        "infectious salmon anemia virus"@en,
+        "salmon isavirus"@en,
+        "Salmon isavirus"@es,
+        "Salmon isavirus"@nl .
+
+<http://aims.fao.org/aos/agrovoc/c_33359> a owl:Class ;
+    rdfs:label "HistophilusSomnus"@en ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/" ;
+    :hasExactSynonym "HS"@en ;
+    rdfs:comment "Haemophilus somnus classified as Histophilus somni, is a Gram-negative bacterium that can cause respiratory and systemic infections in cattle and other domestic and farm animals"@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_33359"@en ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "Haemophilus somnus"@ar,
+        "Haemophilus somnus"@de,
+        "Histophilus ovis"@de,
+        "Haemophilus somnus"@en,
+        "Histophilus ovis"@en,
+        "Histophilus somni"@en,
+        "histophilus somnus"@en,
+        "Haemophilus somnus"@es,
+        "Histophilus ovis"@es,
+        "Haemophilus somnus"@nl,
+        "Histophilus somni"@nl,
+        "Haemophilus somnus"@sv .
+
+<http://aims.fao.org/aos/agrovoc/c_35380> a owl:Class ;
+    rdfs:label "PorcineReproductiveAndRespiratorySyndromeVirus"@en ;
+    :hasExactSynonym "PRRS"@en ;
+    rdfs:comment "Porcine Reproductive and Respiratory Syndrome (PRRS) is a viral disease in pigs, causing reproductive failure in sows and respiratory symptoms in pigs of all ages."@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_35380" ;
+    rdfs:subClassOf :PathogenicVirus ;
+    skos:altLabel "المتلازمة التناسلية والتنفسية ع"@ar,
+        "Mystery Swine Disease"@de,
+        "PRRS"@de,
+        "Seuchenhafter Spätabort der Schweine"@de,
+        "PRRS"@en,
+        "PRRSV"@en,
+        "mystery swine disease"@en,
+        "porcine blue miscarriage"@en,
+        "porcine epidemic abortion syndrome"@en,
+        "porcine reproductive and respiratory syndrome"@en,
+        "porcine reproductive and respiratory syndrome virus"@en,
+        "Aborto azul porcino"@es,
+        "Enfermedad misteriosa del cerdo"@es,
+        "SRRP"@es,
+        "Síndrome porcino aborto epidémico"@es,
+        "Síndrome reproductivo y respiratorio porcino"@es .
+
+<http://aims.fao.org/aos/agrovoc/c_36450> a owl:Class ;
+    rdfs:label "LawsoniaIntracellularis"@en ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/" ;
+    rdfs:comment "Lawsonia intracellularis is an obligate intracellular bacterium causing proliferative enteropathy (ileitis) in pigs."@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_36450" ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "لوسونيا خلوية ضمنية"@ar,
+        "Lawsonia intracellularis"@de,
+        "Ileal symbiont intracellularis"@en,
+        "Lawsonia intracellularis"@en,
+        "lawsonia intracellularis"@en,
+        "Lawsonia intracellularis"@es,
+        "Lawsonia intracellularis"@nl,
+        "Lawsonia intracellularis"@sv .
+
+<http://opendata.inra.fr/AHOL/AHOL_0005014> a owl:Class ;
+    rdfs:label "Parasitic Disease"@en ;
+    rdfs:comment "A disease caused by a parasite, for example sea lice infestation in farmed salmon."@en ;
+    rdfs:isDefinedBy "http://opendata.inrae.fr/AHOL/AHOL_0005014" ;
+    rdfs:subClassOf <http://opendata.inra.fr/AHOL/AHOL_0005011> ;
+    skos:altLabel "أمراض طفيلية"@ar,
+        "Ektoparasitose"@de,
+        "Endoparasitose"@de,
+        "Parasitose"@de,
+        "parasitäre Krankheit"@de,
+        "ectoparasitoses"@en,
+        "endoparasitoses"@en,
+        "parasitic diseases"@en,
+        "parasitoses"@en,
+        "Ectoparasitósis"@es,
+        "Endoparasitosis"@es,
+        "Enfermedad parasitaria"@es .
+
+<http://opendata.inra.fr/AnimalDiseasesOnto/AG34> a owl:Class ;
+    rdfs:label "BovineCoronaVirus"@en ;
+    NCIT:IAO_0000412 "http://opendata.inra.fr/AnimalDiseasesOnto/" ;
+    :hasExactSynonym "BCV"@en ;
+    rdfs:comment "Bovine coronavirus primarily causes enteric (intestinal) infections in calves, leading to diarrhea."@en ;
+    rdfs:isDefinedBy "http://opendata.inra.fr/AnimalDiseasesOnto/AG34" ;
+    rdfs:subClassOf :PathogenicVirus ;
+    skos:altLabel "BCV"@en,
+        "BCoV"@en,
+        "bovine corona virus"@en,
+        "bovine coronavirus"@en .
+
+<http://opendata.inra.fr/AnimalDiseasesOnto/AG744> a owl:Class ;
+    rdfs:label "MannheimiaHaemolytica"@en ;
+    NCIT:IAO_0000412 "http://opendata.inra.fr/AnimalDiseasesOnto" ;
+    :hasExactSynonym "MH"@en ;
+    rdfs:comment "Mannheimia haemolytica is a bacterium associated with bovine respiratory disease in cattle, causing pneumonia and respiratory distress."@en ;
+    rdfs:isDefinedBy "http://opendata.inra.fr/AnimalDiseasesOnto/AG744"@en ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "Mannheimia haemolytica"@en,
+        "mannheimia haemolytica"@en,
+        "Mannheimia haemolytica"@nl .
+
+<http://opendata.inra.fr/AnimalDiseasesOnto/AG78> a owl:Class ;
+    rdfs:label "PasteurellaMultocida"@en ;
+    NCIT:IAO_0000412 "https://opendata.inra.fr/AnimalDiseasesOnto/page/Ando" ;
+    rdfs:comment "Pasteurella multocida is a bacterial pathogen in cattle associated with respiratory infections, causing pneumonia and other respiratory symptoms."@en ;
+    rdfs:subClassOf :PathogenicBacterium ;
+    skos:altLabel "Pasteurella multocida"@ar,
+        "Pasteurella multocida"@de,
+        "Pasteurella multocida"@en,
+        "pasteurella multocida"@en,
+        "Pasteurella multocida"@es,
+        "Pasteurella multocida"@nl,
+        "Pasteurella multocida"@sv .
+
+<http://www.purl.org/decide#ProductionCycleTime> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment """ProductionCycleTime refers to the duration of a specific production stage or the entire production process in aquaculture or livestock farming. 
+
+It is used to describe the time span from the beginning to the end of a defined stage (e.g., nursery, finishing) or the complete cycle."""@en ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:793B a <http://opendata.inra.fr/AnimalDiseasesOnto/AG509>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Poultry ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "Genotype 793B of infectious bronchitis virus (IBV), a respiratory pathogen of poultry."@en ;
+    skos:altLabel "IBV 793B genotype"@en .
+
+:ArgyllandBute a :LocalAuthority,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Local Authorities in UK."@en .
+
+:Autopsy a <http://www.purl.org/decide#SampleType>,
+        owl:Class,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "An autopsy sample refers to tissues or specimens collected during a post-mortem examination, conducted to investigate the cause of death or study pathological conditions in animals or humans."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "فحص الجثة"@ar,
+        "Autopsie"@de,
+        "Nekropsie"@de,
+        "Obduktion"@de,
+        "postmortem Diagnose"@de,
+        "autopsy sample"@en,
+        "necropsy"@en,
+        "postmortem diagnosis"@en,
+        "postmortem examination"@en,
+        "Autopsia"@es,
+        "Inspección postmortem"@es,
+        "Necropsia"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_6134> .
+
+:BAL a <http://www.purl.org/decide#SampleType>,
+        owl:Class,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Bronchoalveolar Lavage is a fluid sample collected from the lungs by flushing and retrieving liquid through a bronchoscope to examine respiratory infections." ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "bronchoalveolar lavage"@en .
+
+:BRSV a <http://aims.fao.org/aos/agrovoc/c_16398>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "Bovine Respiratory Syncytial Virus" ;
+    skos:altLabel "فيروس الخلايا التنفسية البقرية"@ar,
+        "Bovines respirator syncytialvirus"@de,
+        "Bovine orthopneumovirus"@en,
+        "bovine respiratory syncytial virus"@en,
+        "Virus sincitial respiratorio bovino"@es,
+        "Bovine orthopneumovirus"@nl .
+
+:Breeder a owl:Class ;
+    rdfs:comment "Birds (hens and roosters) are raised for reproduction to produce fertilized eggs for hatching." ;
+    rdfs:subClassOf :PoultryProductionStages ;
+    skos:altLabel "breeder birds"@en .
+
+:Breeding a owl:Class ;
+    rdfs:comment "Pid production Breeding stage in pigs involves reproductive activities where a sow (mature female), boar (male pig), and gilt (young female yet to farrow but ready to breed) participate in the mating process." ;
+    rdfs:subClassOf :PigProductionStages ;
+    skos:altLabel "breeding stage"@en .
+
+:Broiler a :PoultryProductionStages,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:comment "Chicks raised specifically for meat production grow rapidly and are typically processed within 6–8 weeks." ;
+    rdfs:subClassOf :PoultryProductionStages ;
+    skos:altLabel "فروج الشي"@ar,
+        "Broiler"@de,
+        "Masthuhn"@de,
+        "broiler chickens"@en,
+        "broilers"@en,
+        "Broiler"@es,
+        "Pollo de engorde"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_9435> .
+
+:CS04 a <http://www.purl.org/decide#SampleResult>,
+        owl:NamedIndividual ;
+    rdfs:label "0"@en ;
+    rdfs:comment "an individual type of sample results" .
+
+:CS06 a :Breed,
+        owl:NamedIndividual ;
+    rdfs:label "Beef"@en ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "an individual type of breed" .
+
+:CS22 a owl:Class ;
+    rdfs:label "BRDCasesObservation"@en ;
+    rdfs:comment "Represents the number of BRD cases in a region/time."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "brdcases observation"@en .
+
+:CS29 a owl:ObjectProperty ;
+    rdfs:label "hasHouse"@en ;
+    rdfs:comment "Links a farm to one or more houses within it."@en ;
+    rdfs:domain <http://www.purl.org/decide#Farm>,
+        :CS62 ;
+    rdfs:range :CS00 .
+
+:CS30 a owl:ObjectProperty ;
+    rdfs:label "hasFlock"@en ;
+    rdfs:comment "Links a house to one or more flocks within it." ;
+    rdfs:domain :CS00 ;
+    rdfs:range :CS28 .
+
+:CS31 a owl:ObjectProperty ;
+    rdfs:label "hasSample"@en ;
+    rdfs:comment "Links a flock to its associated poultry sample."@en ;
+    rdfs:domain :CS28 ;
+    rdfs:range <http://www.purl.org/decide#Sample> .
+
+:CS41 a :PoultrySample,
+        owl:NamedIndividual ;
+    rdfs:label "PoultrySample101"@en ;
+    :CS16 "1" ;
+    :CS17 "2019-09-10"^^xsd:date ;
+    :hasDiagnosticTest :CS07 ;
+    :hasPathogen :CS42 .
+
+:CS42 a <http://opendata.inra.fr/AnimalDiseasesOnto/AG509>,
+        owl:NamedIndividual ;
+    rdfs:label "IB"@en ;
+    :affectsSpecies :Poultry ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "an individual (entity) that represent Infectious Bronchis pathogen" ;
+    skos:altLabel "فيروس إلتهاب قصبات الطيور الخمجي"@ar,
+        "Avian infectious bronchitis virus"@de,
+        "IBV"@en,
+        "avian infectious bronchitis virus"@en,
+        "infectious bronchitis virus"@en,
+        "Virus bronquitis infecciosa aviar"@es .
+
+:CS59 a owl:DatatypeProperty ;
+    rdfs:label "mortality"@en ;
+    rdfs:comment "Data type property that gives the mortality recorded for a sample, as the total weight of dead animals in kg (e.g. a salmon farm record)." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range xsd:decimal .
+
+:CS63 a owl:ObjectProperty ;
+    rdfs:label "hasPoultryFarmIdentification"@en ;
+    rdfs:comment "Object property that links  a unique identifier specific to poultry farms, used for traceability and health monitoring purposes." ;
+    rdfs:domain :FarmIdentification ;
+    rdfs:range :CS62 .
+
+:CS76 a :Breed,
+        owl:NamedIndividual ;
+    rdfs:label "Mixed" ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Mixed breed cattle are crossbred animals that do not belong to a single pure breed category. May include dairy-beef crosses or other hybrid breeding combinations" ;
+    skos:altLabel "crossbred"@en,
+        "mixed breed"@en .
+
+:CS91 a owl:DatatypeProperty ;
+    rdfs:label "actualBiomass"@en ;
+    rdfs:comment "Data type property that gives the numeric actual biomass (total live weight in kg) recorded for a sample (e.g. a salmon farm record)." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range xsd:decimal .
+
+:Dairy a :Breed,
+        owl:Class,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "Dairy breed refers to a type of livestock, for example cows, that is specifically raised for milk production" ;
+    rdfs:subClassOf :Breed ;
+    skos:altLabel "ماشية الألبان"@ar,
+        "Milchvieh"@de,
+        "dairy cattle"@en,
+        "Ganado de leche"@es,
+        "Ganado lechero"@es .
+
+:Egglaying a owl:Class ;
+    rdfs:comment "Egg-laying breed refers to a type of poultry, for example chickens, that is specifically raised for producing a high number of eggs." ;
+    rdfs:subClassOf :Breed ;
+    skos:altLabel "egg-laying"@en .
+
+:EileanSiar a :LocalAuthority,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Local Authorities in UK."@en .
+
+:Farm_38236 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_38236"@en ;
+    :CS29 :House_2752546_1 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_38423 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_38423"@en ;
+    :CS29 :House_1646742_6 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_38543 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_38543"@en ;
+    :CS29 :House_6369989_4 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_38615 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_38615"@en ;
+    :CS29 :House_1729635_2,
+        :House_1729635_3 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_39044 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_39044"@en ;
+    :CS29 :House_2214740_1,
+        :House_2214740_2,
+        :House_2214740_3 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_39105 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_39105"@en ;
+    :CS29 :House_1761167_5 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_39488 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_39488"@en ;
+    :CS29 :House_1977700_1 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_40458 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_40458"@en ;
+    :CS29 :House_946937_1 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Farm_40981 a :CS62,
+        owl:NamedIndividual ;
+    rdfs:label "PF_ID_40981"@en ;
+    :CS29 :House_2811332_2 ;
+    rdfs:comment "This is a Poultry Farm ID"@en .
+
+:Finishing a :PigProductionStages,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:comment "Finishing stage in pigs is the final growth phase, typically from 10 to 25 weeks of age, where pigs grow from about 20–25 kg to 100–110+ kg before market." ;
+    rdfs:subClassOf :PigProductionStages ;
+    skos:altLabel "تسمين"@ar,
+        "Ausmast"@de,
+        "Mast"@de,
+        "fattening"@en,
+        "Ceba"@es,
+        "Engorde"@es,
+        "gödning"@sv ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_2817> .
+
+:FlockID_261479 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "261479" ;
+    :CS33 "4856405" ;
+    :CS34 "2019-09-05"^^xsd:date ;
+    :CS35 "2019-10-31"^^xsd:date ;
+    :CS36 "ALT" ;
+    :CS37 "1" ;
+    rdfs:comment "is an individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_261895 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "261895" ;
+    :CS33 "164846" ;
+    :CS34 "2019-09-12"^^xsd:date ;
+    :CS35 "2019-11-05"^^xsd:date ;
+    :CS36 "ALT" ;
+    :CS37 "0" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_266024 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "266024" ;
+    :CS33 "164846" ;
+    :CS34 "2019-11-22"^^xsd:date ;
+    :CS35 "2020-01-15"^^xsd:date ;
+    :CS36 "ALT" ;
+    :CS37 "0" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_267678 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "267678" ;
+    :CS33 "164846" ;
+    :CS34 "2019-12-23"^^xsd:date ;
+    :CS35 "2020-02-20"^^xsd:date ;
+    :CS36 "ALT" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_268273 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "268273" ;
+    :CS33 "164846" ;
+    :CS34 "2019-12-27"^^xsd:date ;
+    :CS35 "2020-02-06"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_273670 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "273670" ;
+    :CS33 "487236" ;
+    :CS34 "2020-04-07"^^xsd:date ;
+    :CS35 "2020-05-20"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_273898 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "273898" ;
+    :CS33 "164846" ;
+    :CS34 "2020-04-06"^^xsd:date ;
+    :CS35 "2020-05-20"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_274072 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "274072" ;
+    :CS33 "487236" ;
+    :CS34 "2020-04-08"^^xsd:date ;
+    :CS35 "2020-05-20"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_274453 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "274453" ;
+    :CS33 "487236" ;
+    :CS34 "2020-04-21"^^xsd:date ;
+    :CS35 "2020-06-03"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_279259 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "279259" ;
+    :CS33 "487236" ;
+    :CS34 "2020-07-14"^^xsd:date ;
+    :CS35 "2020-08-26"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "1" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_279597 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "279597" ;
+    :CS33 "487236" ;
+    :CS34 "2020-07-20"^^xsd:date ;
+    :CS35 "2020-09-09"^^xsd:date ;
+    :CS36 "ALT" ;
+    :CS37 "0" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:FlockID_280335 a :CS28,
+        owl:NamedIndividual ;
+    :CS32 "280335" ;
+    :CS33 "487236" ;
+    :CS34 "2020-07-31"^^xsd:date ;
+    :CS35 "2020-09-10"^^xsd:date ;
+    :CS36 "REG" ;
+    :CS37 "0" ;
+    rdfs:comment "An individual instance representing a specific, uniquely identified flock entity used to associate birds with a defined production or health unit or samples" .
+
+:France a NCIT:NCIT_C25464,
+        owl:NamedIndividual ;
+    rdfs:label "France"@en ;
+    :affectsSpecies :Cattle ;
+    rdfs:comment "France - European country with land border to Belgium."@en ;
+    skos:altLabel "الجمهورية الفرنسية"@ar,
+        "فرنسا"@ar,
+        "Frankreich"@de,
+        "Französische Republik"@de,
+        "French Republic"@en,
+        "Francia"@es,
+        "República Francesa"@es,
+        "Frankrijk"@nl,
+        "Frankrike"@sv,
+        "فرانس"@ur .
+
+:Hatching a owl:Class ;
+    rdfs:comment "Fertilized eggs are incubated under controlled conditions until chicks hatch, usually in 21 days." ;
+    rdfs:subClassOf :PoultryProductionStages ;
+    skos:altLabel "تفريخ"@ar,
+        "Ausschlüpfen"@de,
+        "Schlüpfen"@de,
+        "egg hatching"@en,
+        "Eclosión"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_3504> .
+
+:Highland a :LocalAuthority,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Local Authorities in UK."@en .
+
+:House_1646742_6 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_1646742_6"@en ;
+    :CS30 :FlockID_261895 ;
+    :CS45 "6" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_1729635_2 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_1729635_2"@en ;
+    :CS30 :FlockID_273670 ;
+    :CS45 "2" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_1729635_3 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_1729635_3"@en ;
+    :CS30 :FlockID_273898 ;
+    :CS45 "3" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_1761167_5 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_1761167_5"@en ;
+    :CS30 :FlockID_266024 ;
+    :CS45 "5" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_1977700_1 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_1977700_1"@en ;
+    :CS30 :FlockID_267678 ;
+    :CS45 "1" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_2214740_1 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_2214740_1"@en ;
+    :CS30 :FlockID_279597 ;
+    :CS45 "1" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_2214740_2 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_2214740_2"@en ;
+    :CS30 :FlockID_279259 ;
+    :CS45 "2" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_2214740_3 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_2214740_3"@en ;
+    :CS30 :FlockID_274453 ;
+    :CS45 "3" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_2752546_1 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_2752546_1"@en ;
+    :CS30 :FlockID_261479 ;
+    :CS45 "1" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_2811332_2 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_2811332_2"@en ;
+    :CS30 :FlockID_268273 ;
+    :CS45 "2" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_6369989_4 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_6369989_4"@en ;
+    :CS30 :FlockID_274072 ;
+    :CS45 "4" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:House_946937_1 a :CS00,
+        owl:NamedIndividual ;
+    rdfs:label "House_946937_1"@en ;
+    :CS30 :FlockID_280335 ;
+    :CS45 "1" ;
+    rdfs:comment "House (like 1, 2, 3) appears in many farms, but it's contextual.That means Farm A might have House 1, and Farm B also might have its own House 1 — but they're not the same. so we model House individuals uniquely per Farm or PoultryFarm (e.g., House_Farm2214740_1). "@en .
+
+:Layer a owl:Class ;
+    rdfs:comment "Pullets (young hens) are raised to become layers, producing eggs regularly starting around 18–20 weeks." ;
+    rdfs:subClassOf :PoultryProductionStages ;
+    skos:altLabel "دجاج بيوض"@ar,
+        "Legehenne"@de,
+        "Legehuhn"@de,
+        "layer chickens"@en,
+        "laying hens"@en,
+        "Gallina ponedora"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_12109> .
+
+:MH a <http://opendata.inra.fr/AnimalDiseasesOnto/AG744>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005012> ;
+    :hasExactSynonym "Mannheimia haemolytica" ;
+    rdfs:comment "Mannheimia haemolytica (member of the Pasteurellaceae family, two major genotypes (1 and 2))" ;
+    skos:altLabel "Mannheimia haemolytica"@en,
+        "Mannheimia haemolytica"@nl .
+
+:Madrid a :Province,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Province."@en .
+
+:Mass a <http://opendata.inra.fr/AnimalDiseasesOnto/AG509>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Poultry ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "Massachusetts (Mass) genotype of infectious bronchitis virus (IBV), a respiratory pathogen of poultry."@en ;
+    skos:altLabel "IBV Massachusetts genotype"@en .
+
+:NorthBrabant a :Province,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Province."@en .
+
+:Nursery a owl:Class ;
+    rdfs:comment "Nursery stage is the post-weaning phase (4–10 weeks) where piglets are housed separately, given special feed, and undergo rapid growth, socialization, and health care." ;
+    rdfs:subClassOf :PigProductionStages ;
+    skos:altLabel "nursery stage"@en .
+
+:PM a <http://opendata.inra.fr/AnimalDiseasesOnto/AG78>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005012> ;
+    :hasExactSynonym "Pasteurella multocida"@en ;
+    rdfs:comment "Pasteurella multocida (member of the Pasteurellaceae family), a bacterial pathogen involved in bovine respiratory disease."@en ;
+    skos:altLabel "Pasteurella multocida"@ar,
+        "Pasteurella multocida"@de,
+        "Pasteurella multocida"@en,
+        "Pasteurella multocida"@es,
+        "Pasteurella multocida"@nl,
+        "Pasteurella multocida"@sv .
+
+:Parasite a owl:Class ;
+    rdfs:label "Parasite"@en ;
+    rdfs:comment "An organism that lives on or in a host and causes disease or harm to it, such as sea lice in farmed salmon."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#Pathogen> ;
+    skos:altLabel "طفيليات"@ar,
+        "Parasit"@de,
+        "parasites"@en,
+        "Parásito"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_5574> .
+
+:Processing a owl:Class ;
+    rdfs:comment "Mature birds are slaughtered, cleaned, and prepared for meat production or market." ;
+    rdfs:subClassOf :PoultryProductionStages ;
+    skos:altLabel "تجهيز"@ar,
+        "Transformation (von Produkten)"@de,
+        "Verarbeitung"@de,
+        "Verarbeitungsverfahren"@de,
+        "operational processing"@en,
+        "processing stage"@en,
+        "transformation (of products)"@en,
+        "Procesamiento"@es,
+        "Transformación (de productos)"@es .
+
+:SampleNumber a owl:Class ;
+    rdfs:label "SampleNumber"@en ;
+    rdfs:comment "SampleNumber is a unique identifier assigned to a specimen collected from livestock or other sources for purposes such as diagnostics or research, facilitating individual sample tracking and data organization."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "sample number"@en .
+
+:ShetlandIslands a :LocalAuthority,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Local Authorities in UK."@en .
+
+:Suckling a owl:Class ;
+    rdfs:comment """Suckling stage begins at birth and lasts for about 21–28 days (3–4 weeks), during which piglets nurse from the sow.
+They are born small (2–3 pounds), blind, and hairless but quickly develop eyesight, teeth, and mobility.
+By around 3 weeks, they begin nibbling on solid feed alongside milk as they prepare for weaning.""" ;
+    rdfs:subClassOf :PigProductionStages ;
+    skos:altLabel "رضاعة"@ar,
+        "Säugen"@de,
+        "Lactancia"@es,
+        "Lactancia natural"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_7493> .
+
+:Swab a <http://www.purl.org/decide#SampleType>,
+        owl:Class,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle,
+        :Pig ;
+    rdfs:comment "individual for diagnostic test",
+        "A swab is a sample collection method involving a small absorbent tool, often a cotton-tipped applicator, used to collect specimens from surfaces or body areas, such as the throat or nasal cavity, for diagnostic or research purposes."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "swab sample"@en .
+
+:Weaning a :PigProductionStages,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:comment "Weaning stage (4–8 weeks) is when piglets are separated from the sow and transition fully to solid food, ending milk consumption." ;
+    rdfs:subClassOf :PigProductionStages ;
+    skos:altLabel "فطام"@ar,
+        "Absetzen"@de,
+        "Destete"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_15291> .
+
+:WeightUnit a owl:Class ;
+    rdfs:comment "A measurement unit used to quantify mass or weight, such as grams, kilograms, or pounds." ;
+    rdfs:subClassOf <http://www.purl.org/decide#Unit> .
+
+:hasBreed a owl:ObjectProperty ;
+    rdfs:comment "Link a sample to specific  animal breed." ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range :Breed .
+
+:hasSampleResult a owl:ObjectProperty ;
+    rdfs:comment "Link Sample to result positive 1 or negative 0" ;
+    rdfs:domain <http://www.purl.org/decide#Sample> ;
+    rdfs:range <http://www.purl.org/decide#SampleResult> .
+
+<http://www.purl.org/decide#Farm> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment "A farm is an agricultural or aquacultural establishment where crops are cultivated, terrestrial livestock and/or aquatic species (such as fish or shellfish) are raised for food production or other commercial, research, or conservation purposes."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "مزارع"@ar,
+        "Ranch"@de,
+        "landwirtschaftlicher Betrieb"@de,
+        "landwirtschaftliches Unternehmen"@de,
+        "farm enterprises"@en,
+        "farms"@en,
+        "ranches"@en,
+        "Empresas agrarias"@es,
+        "Explotaciones agropecuarias"@es,
+        "Explotación agraria"@es,
+        "Fincas"@es,
+        "Granjas"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_2809> .
+
+<http://www.purl.org/decide#MeasurementType> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment "A classification of measurement, such as weight or age" ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:ActualBiomass a owl:Class ;
+    rdfs:comment "Represents the total measured live body weight of the sampled population in kilograms at a specific timepoint." ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "كتلة حيوية"@ar,
+        "Biomasse"@de,
+        "Phytomasse"@de,
+        "biomass"@en,
+        "phytomass"@en,
+        "Biomasa"@es,
+        "Fitomasa"@es,
+        "biomassa"@sv ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_926> .
+
+:Age a owl:Class ;
+    rdfs:comment "A measurement Type" ;
+    rdfs:subClassOf <http://www.purl.org/decide#MeasurementType> ;
+    skos:altLabel "عمر"@ar,
+        "Alter"@de,
+        "Edad"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_186> .
+
+:Beef a owl:Class ;
+    rdfs:label "Beef"@en ;
+    rdfs:comment "Breeds can be categorized as meat, beef" ;
+    rdfs:subClassOf :Breed ;
+    owl:disjointWith :Egglaying ;
+    skos:altLabel "ماشية اللحم"@ar,
+        "Fleischrind"@de,
+        "Mastrind"@de,
+        "beef cattle"@en,
+        "Ganado de carne"@es .
+
+:CS07 a :DiagnosticTest,
+        owl:NamedIndividual ;
+    rdfs:label "PCR"@en ;
+    :affectsSpecies :Cattle,
+        :Pig,
+        :Poultry ;
+    rdfs:comment "an individual (entity) that represent PCR" ;
+    skos:altLabel "تفاعل سلسلة البوليميرات"@ar,
+        "PCR"@de,
+        "Polymerase-Kettenreaktion"@de,
+        "polymerase chain reaction"@en,
+        "PCR"@es,
+        "Reacción en cadena de la polimerasa"@es,
+        "PCR"@sv .
+
+:CS26 a owl:Class ;
+    rdfs:label "DiseaseOutBreak"@en ;
+    rdfs:comment "Represents disease outbreaks linked to regions, time, and pathogens."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#EventType> ;
+    skos:altLabel "تفشي المرض"@ar,
+        "Krankheitsausbruch"@de,
+        "Wiederaufleben der Krankheit"@de,
+        "disease out break"@en,
+        "disease outbreaks"@en,
+        "resurgence of diseases"@en,
+        "Brote de enfermedad"@es,
+        "Resurgencia de enfermendades"@es,
+        "sjukdomsutbrott"@sv ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_164ea2ee> .
+
+:CS65 a owl:Class ;
+    rdfs:label "Prevelance"@en ;
+    rdfs:comment "Prevalence refers to the proportion of a population that has a specific characteristic or condition at a given time. It is often used in public health to indicate how widespread a disease is within a population." ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:Culture a :DiagnosticTest,
+        owl:NamedIndividual ;
+    :affectsSpecies :Cattle,
+        :Pig ;
+    rdfs:comment "an individual type of dianostic test" ;
+    skos:altLabel "bacterial culture"@en,
+        "kweek"@nl .
+
+:Gelderland a :Province,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Province."@en .
+
+:Limburg a :Province,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Province."@en .
+
+:Mortality a owl:Class ;
+    rdfs:label "Mortality" ;
+    rdfs:comment "Mortality represents the death of one or more individuals in a given animal population, often measured over a specified time frame, due to natural causes, disease, management practices, or environmental factors." ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "وفيات"@ar,
+        "Mortalität"@de,
+        "Todesrate"@de,
+        "death rate"@en,
+        "Mortalidad"@es,
+        "dödlighet (antal)"@sv,
+        "mortalitet"@sv ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_4945> .
+
+:Mycoplasmahyopneumoniae a <http://aims.fao.org/aos/agrovoc/c_27245>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    rdfs:label "Mycoplasma hyopneumoniae"@en ;
+    :affectsSpecies :Pig ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005012> ;
+    rdfs:comment "An individual representing Pig pathogen."@en ;
+    skos:altLabel "Mycoplasma hyopneumoniae"@ar,
+        "مفطورة رئوية خنزيرية"@ar,
+        "Mycoplasma hyopneumoniae"@de,
+        "M. hyopneumoniae"@en,
+        "Mycoplasma hyopneumoniae"@es,
+        "Mycoplasma hyopneumoniae"@nl,
+        "Mycoplasma hyopneumoniae"@sv .
+
+:Noord-Brabant a :Province,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Province."@en .
+
+:QX a <http://opendata.inra.fr/AnimalDiseasesOnto/AG509>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Poultry ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "QX genotype of infectious bronchitis virus (IBV), a respiratory pathogen of poultry."@en ;
+    skos:altLabel "IBV QX genotype"@en .
+
+:SwineInfluenzaVirus a <http://aims.fao.org/aos/agrovoc/c_6214dcad>,
+        <http://www.purl.org/decide#Pathogen>,
+        owl:NamedIndividual ;
+    rdfs:label "Swine influenza virus" ;
+    :affectsSpecies :Pig ;
+    :causesDisease <http://opendata.inra.fr/AHOL/AHOL_0005015> ;
+    rdfs:comment "An individual representing Pig pathogen."@en ;
+    skos:altLabel "SIV"@en,
+        "swine influenza A virus"@en .
+
+:Weight a owl:Class ;
+    rdfs:comment "A measurement type" ;
+    rdfs:subClassOf <http://www.purl.org/decide#MeasurementType> ;
+    skos:altLabel "وزن الجسم"@ar,
+        "Körpergewicht"@de,
+        "Körpermasse"@de,
+        "body mass"@en,
+        "body weight"@en,
+        "Masa corporal"@es,
+        "Peso corporal"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_15846> .
+
+<http://opendata.inra.fr/AHOL/AHOL_0005011> a owl:Class ;
+    rdfs:label "Infectious Disease" ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/AHOL?p=summary" ;
+    rdfs:comment "Infectious disease class includes diseases caused by pathogens such as viruses, bacteria, fungi, or parasites that can spread between animals, humans, or both" ;
+    rdfs:subClassOf <http://opendata.inra.fr/AHOL/AHOL_0005001> ;
+    skos:altLabel "أمراض خمجية"@ar,
+        "Infektionskrankheit"@de,
+        "ansteckende Krankheit"@de,
+        "übertragbare Krankheit"@de,
+        "communicable diseases"@en,
+        "contagious diseases"@en,
+        "infectious diseases"@en,
+        "Enfermedad infecciosa"@es,
+        "Enfermedades contagiosas"@es,
+        "Enfermedades transmisibles"@es .
+
+<http://www.purl.org/decide#Unit> a owl:Class ;
+    rdfs:label "Unit" ;
+    NCIT:IAO_0000119 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    :imported_from "http://www.purl.org/decide#Unit"@en ;
+    rdfs:comment "The class representing a unit of measurement or denomination. Instances of this class may include various units such as length units, weight units, time units, etc. It serves as a general category for expressing quantitative values in a standardized manner across different domains."@en ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:2 a :LabReference,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing Lab refence" .
+
+:2018-01-01 a :Date,
+        owl:NamedIndividual .
+
+:CS20 a owl:Class ;
+    rdfs:label "Quarter"@en ;
+    rdfs:comment "A time-based unit representing one-fourth of a year, typically spanning three months." ;
+    rdfs:subClassOf <http://www.purl.org/decide#Unit> .
+
+:FarmType a owl:Class ;
+    rdfs:label "FarmType"@en ;
+    rdfs:comment "FarmType categorizes the nature or focus of a farm, specifying whether it is oriented towards crop cultivation, livestock raising, or a combination of both, providing a classification for agricultural purposes."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "farm type"@en .
+
+:Salmon a :Species,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Salmon" ;
+    NCIT:IAO_0000112 "Atlantic salmon (Salmo salar) are frequently farmed in marine cages and monitored for growth, health, and disease events such as sea lice infestation or viral infections." ;
+    NCIT:IAO_0000118 """Atlantic salmon
+Pacific salmon""" ;
+    NCIT:IAO_0000412 "https://agrovoc.fao.org/browse/agrovoc/en/page/c_6756" ;
+    rdfs:comment "A common name for several species of ray-finned fish in the family Salmonidae, widely farmed in aquaculture systems for food production. Salmon are anadromous, meaning they hatch in freshwater, migrate to the ocean, and return to freshwater to spawn." ;
+    rdfs:subClassOf :Species ;
+    skos:altLabel "سلمون"@ar,
+        "Lachs"@de,
+        "grilse"@en,
+        "Salmón"@es,
+        "lax"@sv ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_6756>,
+        NCIT:NCBITaxon_8030 .
+
+:Valencia a :Province,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing different Province."@en .
+
+:WaterType a owl:Class ;
+    rdfs:comment "In aquaculture (fish farming, like salmon farming), WaterType refers to the kind of water environment (freshwater, seawater, or brackish)  the animals are raised in." ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+<http://aims.fao.org/aos/agrovoc/c_6214dcad> a owl:Class ;
+    rdfs:label "SwineInfluenzaVirus"@en ;
+    :hasExactSynonym "SI"@en ;
+    rdfs:comment "Swine Influenza is a respiratory viral infection in pigs, characterized by coughing, sneezing, and fever, with potential transmission to humans."@en ;
+    rdfs:isDefinedBy "https://agrovoc.fao.org/browse/agrovoc/en/page/c_6214dcad" ;
+    rdfs:subClassOf :PathogenicVirus ;
+    skos:altLabel "SIV"@en,
+        "swine influenza virus"@en .
+
+<http://opendata.inra.fr/AHOL/AHOL_0005001> a owl:Class ;
+    rdfs:label "Disease"@en ;
+    NCIT:IAO_0000412 "http://opendata.inra.fr/AHOL/" ;
+    rdfs:isDefinedBy "Damage on the health. The modifications of an organism defending itself against an infection or another damager factor. Perturbation of the animal's normal functions.",
+        "https://bioportal.bioontology.org/ontologies/AHOL?p=summary" ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "مرض"@ar,
+        "Krankheit"@de,
+        "diseases"@en,
+        "Enfermedad"@es,
+        "sjukdomar"@sv .
+
+<http://opendata.inra.fr/AnimalDiseasesOnto/AG509> a owl:Class ;
+    rdfs:label "InfectiousBronchitisVirus"@en ;
+    NCIT:IAO_0000412 "http://opendata.inra.fr/AnimalDiseasesOnto" ;
+    :hasExactSynonym "IB"@en ;
+    rdfs:comment "Infectious bronchitis is a highly contagious viral respiratory disease in chickens, characterized by respiratory distress and egg production drops."@en ;
+    rdfs:isDefinedBy "http://opendata.inra.fr/AnimalDiseasesOnto/AG509" ;
+    rdfs:subClassOf :PathogenicVirus ;
+    skos:altLabel "فيروس إلتهاب قصبات الطيور الخمجي"@ar,
+        "Avian infectious bronchitis virus"@de,
+        "IBV"@en,
+        "avian infectious bronchitis virus"@en,
+        "infectious bronchitis virus"@en,
+        "Virus bronquitis infecciosa aviar"@es .
+
+<http://www.purl.org/decide#SampleResult> a owl:Class ;
+    rdfs:label "SampleResult" ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment "SampleResult represents the outcome or findings derived from analyzing a specimen, providing valuable information about the health or characteristics of the sampled subject, whether it be cattle, pig, poultry, or another source."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "sample result"@en .
+
+<http://www.purl.org/decide/LiveStockHealthOnto/LHO#01/07/2020> a :Date,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual represent date" .
+
+:2014-Q1 a :Date,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing a Particular Date."@en .
+
+:2024-12-01 a :Date,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual representing the sampling date."@en .
+
+:DiagnosticTest a owl:Class ;
+    rdfs:label "DiagnosticTest"@en ;
+    rdfs:comment "Diagnostic tests, such as PCR and culture, are utilized in pigs, poultry, and cattle to identify and analyze pathogens, aiding in disease detection and management."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "تقنيات التشخيص"@ar,
+        "فحص سريري"@ar,
+        "diagnostische Methodik"@de,
+        "klinische Prüfung"@de,
+        "clinical examination"@en,
+        "diagnostic techniques"@en,
+        "diagnostic test"@en,
+        "Examen clínico"@es,
+        "Técnica de diagnóstico"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_16712> .
+
+:PigSample a owl:Class ;
+    rdfs:comment "PigSample is n number of observations for Pig and piglets"@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#Sample> .
+
+:SS a <http://www.purl.org/decide#SampleType>,
+        owl:NamedIndividual ;
+    :affectsSpecies :Poultry ;
+    rdfs:comment "Unknown breed category used when the specific breed information is not available or not recorded in the sample data",
+        "An individual representing SampleType for Poultry."@en .
+
+:SalmonSample a owl:Class ;
+    NCIT:IAO_0000112 "SalmonSample is \"n\" number of observation for Salmon data." ;
+    rdfs:comment "A SalmonSample represents a biological sample collected from a salmon individual, associated with pathogen detection, diagnostic tests, and location data, Mortality rate, actual biomass and water type." ;
+    rdfs:subClassOf <http://www.purl.org/decide#Sample> .
+
+:Scotland a NCIT:NCIT_C25464,
+        owl:NamedIndividual ;
+    rdfs:label "Scotland" ;
+    :affectsSpecies :Salmon ;
+    rdfs:comment "An individual representing different Countries."@en ;
+    skos:altLabel "اسكوتلاندا"@ar,
+        "جزر أوركني"@ar,
+        "جزر شيتلاند"@ar,
+        "Orkneyinseln"@de,
+        "Schottland"@de,
+        "Shetlandinseln"@de,
+        "Orkney Islands"@en,
+        "Shetland Islands"@en,
+        "Escocia"@es,
+        "Islas Shetland"@es,
+        "Schotland"@nl,
+        "Skottland"@sv,
+        "اسکاٹ لینڈ"@ur .
+
+:Seawater a :WaterType,
+        owl:NamedIndividual ;
+    rdfs:comment "An individual that represents the water type for salmon."@en ;
+    skos:altLabel "مياه البحر"@ar,
+        "Meerwasser"@de,
+        "sea water"@en,
+        "Agua de mar"@es,
+        "Agua marina"@es .
+
+:Spain a NCIT:NCIT_C25464,
+        owl:NamedIndividual ;
+    rdfs:label "Spain" ;
+    :affectsSpecies :Pig ;
+    rdfs:comment "An individual representing different Countries."@en ;
+    skos:altLabel "أسبانيا"@ar,
+        "الدولة الإسبانية"@ar,
+        "مملكة إسبانيا"@ar,
+        "Königreich Spanien"@de,
+        "Spanien"@de,
+        "Kingdom of Spain"@en,
+        "Spanish State"@en,
+        "España"@es,
+        "Estado Español"@es,
+        "Reino de España"@es,
+        "Spanje"@nl,
+        "Spanien"@sv,
+        "ہسپانیہ"@ur .
+
+:TimeUnit a owl:Class ;
+    rdfs:comment "Measuring time" ;
+    rdfs:subClassOf <http://www.purl.org/decide#Unit> .
+
+:Tissue a <http://www.purl.org/decide#SampleType>,
+        owl:Class,
+        owl:NamedIndividual ;
+    :affectsSpecies :Pig ;
+    rdfs:comment "A tissue sample is a specimen composed of cells derived from an organism's body, collected for diagnostic or research purposes to study cellular structures, functions, or identify potential abnormalities."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#SampleType> ;
+    skos:altLabel "نسيج"@ar,
+        "Gewebe"@de,
+        "tissue sample"@en,
+        "Tejido"@es,
+        "vävnad"@sv .
+
+<http://www.purl.org/decide#EventType> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=classes" ;
+    rdfs:comment "It refer to different types of events related to livestock or farming. For example, \"slaughter\" could be one event type, and \"birth,\" \"vaccination,\" or \"disease outbreak\" could be other event types."@en ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:CattleProductionStages a owl:Class ;
+    rdfs:comment "Livestock production stages are the sequential phases in the life and management of farm cattles" ;
+    rdfs:subClassOf :LivestockProductionStages .
+
+:Date a owl:Class ;
+    rdfs:label "Date" ;
+    rdfs:comment "Date" ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:LivestockProductionStages a owl:Class ;
+    rdfs:comment "Livestock production stages are the sequential phases in the life and management of farm animals, including breeding, birth, suckling, weaning, growing, finishing, and reproduction." ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+:LocalAuthority a owl:Class ;
+    NCIT:IAO_0000112 "For example for Scotland local authority council example areas are Highland, Argyll and Bute, or Glasgow City etc..." ;
+    rdfs:comment "An administrative council area that governs and delivers public services for a defined local community region." ;
+    rdfs:subClassOf NCIT:NCIT_C25341 .
+
+:PoultrySample a owl:Class ;
+    rdfs:comment "PoultrySample is \"n\" number of observation for Poultry data."@en,
+        "PoultrySample is associated with a specific flock, linking pathogen data, diagnostic tests, and geolocation."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf :CS31 ] ;
+            owl:someValuesFrom :CS28 ],
+        <http://www.purl.org/decide#Sample> .
+
+<http://opendata.inra.fr/AHOL/AHOL_0005012> a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Bacterial Disease"@en ;
+    rdfs:comment "Bacterial disease is an illness caused by pathogenic bacteria, such as Mannheimia haemolytica, Pasteurella multocida, Histophilus somni, or Mycoplasma bovis in cattle."@en ;
+    rdfs:subClassOf <http://opendata.inra.fr/AHOL/AHOL_0005011> ;
+    skos:altLabel "أمراض جرثومية"@ar,
+        "Bakteriose"@de,
+        "bakterielle Krankheit"@de,
+        "bacterial diseases"@en,
+        "bacterioses"@en,
+        "Bacteriosis"@es,
+        "Enfermedad bacteriana"@es .
+
+NCIT:NCIT_C25341 a owl:Class ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "Location refers to a specific place or area where an event, object, or entity exists or occurs." ;
+    rdfs:isDefinedBy "https://ontobee.org/ontology/NCIT?iri=http://purl.obolibrary.org/obo/NCIT_C25341" ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "موقع"@ar,
+        "Lage"@de,
+        "Ort"@de,
+        "Localización"@es,
+        "läge"@sv .
+
+:CattleSample a owl:Class ;
+    rdfs:comment "CattleSamples are the  \"n\" number of observations  for Cattle"@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#Sample> .
+
+:LabReference a owl:Class ;
+    rdfs:label "LabReference"@en ;
+    rdfs:comment "Lab reference, often a unique number, is assigned to data related to farm animals for identification and tracking within a laboratory or data system."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "lab reference"@en .
+
+:PathogenicBacterium a owl:Class ;
+    rdfs:label "PathogenicBacterium"@en ;
+    rdfs:comment "A bacterium that causes disease in its host."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#Pathogen> ;
+    skos:altLabel "البكتيريا المسببة للأمراض"@ar,
+        "pathogene Bakterie"@de,
+        "pathogenic bacteria"@en,
+        "pathogenic bacterium"@en,
+        "Bacteria patógena"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_34317> .
+
+:PathogenicVirus a owl:Class ;
+    rdfs:label "PathogenicVirus"@en ;
+    rdfs:comment "A virus that causes disease in its host."@en ;
+    rdfs:subClassOf <http://www.purl.org/decide#Pathogen> ;
+    skos:altLabel "الفيروسات المسببة للأمراض"@ar,
+        "pathogenes Virus"@de,
+        "pathogenic virus"@en,
+        "pathogenic viruses"@en,
+        "Virus patógenos"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_34318> .
+
+:PoultryProductionStages a owl:Class ;
+    rdfs:comment "Poultry production stages are the key phases in the lifecycle and management of birds raised for eggs or meat, including breeding, hatching, growing, laying, and processing." ;
+    rdfs:subClassOf :LivestockProductionStages .
+
+:Meat a :Breed,
+        owl:NamedIndividual ;
+    :affectsSpecies :Pig,
+        :Poultry ;
+    rdfs:comment "An individual representing Breed Type."@en,
+        "An individual representing a cattle breed of mixed meat and dairy type."@en ;
+    skos:altLabel "حيوانات اللحم"@ar,
+        "Fleischtier"@de,
+        "flesh animals"@en,
+        "meat animals"@en,
+        "Animal de carne"@es .
+
+:PigProductionStages a owl:Class ;
+    rdfs:comment "Pig production stages focused on growth and productivity" ;
+    rdfs:subClassOf :LivestockProductionStages .
+
+:Poultry a :Species,
+        owl:NamedIndividual ;
+    rdfs:label "Poultry"@en ;
+    rdfs:comment "Avian species - chickens, turkeys, ducks"@en ;
+    skos:altLabel "دواجن"@ar,
+        "طيور مدجنة"@ar,
+        "Geflügel"@de,
+        "domestizierter Vogel"@de,
+        "domesticated birds"@en,
+        "Ave de corral"@es,
+        "Aves domesticas"@es .
+
+:TheNetherlands a NCIT:NCIT_C25464,
+        owl:NamedIndividual ;
+    rdfs:label "TheNetherlands" ;
+    :affectsSpecies :Cattle,
+        :Poultry ;
+    rdfs:comment "An individual representing Country."@en,
+        "The Netherlands - European country with land border to Belgium."@en ;
+    skos:altLabel "مملكة هولندا"@ar,
+        "هولندا"@ar,
+        "هولندا (مملكة _)"@ar,
+        "Holland"@de,
+        "Königreich Niederlande"@de,
+        "Niederlande"@de,
+        "Holland"@en,
+        "Kingdom of the Netherlands"@en,
+        "Netherlands"@en,
+        "Netherlands (Kingdom of the)"@en,
+        "Holanda"@es,
+        "Países Bajos"@es,
+        "Países Bajos (Reino de los)"@es,
+        "Reino de los Países Bajos"@es,
+        "Koninkrijk der Nederlanden"@nl,
+        "Nederland"@nl,
+        "Nederländerna"@sv,
+        "نیدرلینڈز"@ur .
+
+:Province a owl:Class ;
+    rdfs:comment "A province is an administrative region or territorial division within a country, typically with its own government and administrative structure."@en ;
+    rdfs:subClassOf NCIT:NCIT_C25341 .
+
+:Pig a :Species,
+        owl:NamedIndividual ;
+    rdfs:label "Pig"@en ;
+    rdfs:comment "Porcine species - pigs, swine"@en ;
+    skos:altLabel "خنازير"@ar,
+        "Schwein"@de,
+        "domestic pigs"@en,
+        "hogs"@en,
+        "pigs"@en,
+        "swine"@en,
+        "Cerdo"@es,
+        "varken"@nl,
+        "gris"@sv,
+        "grisar"@sv,
+        "svin"@sv,
+        "سؤر"@ur .
+
+:Species a owl:Class ;
+    rdfs:label "Species"@en ;
+    rdfs:comment "Cattle, pig, poultry, and salmon represent distinct species within the animal kingdom commonly raised for agricultural or aquacultural purposes, including meat production."@en,
+        "Livestock species classification"@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    owl:equivalentClass "http://www.purl.org/decide#SpeciesGroup"@en ;
+    skos:altLabel "أنواع"@ar,
+        "Art"@de,
+        "Spezies"@de,
+        "Especie"@es,
+        "arter"@sv ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_7280> .
+
+:Breed a owl:Class ;
+    rdfs:label "Breed"@en ;
+    rdfs:comment "Breeds are used to categorize and classify animals based on specific characteristics, traits, and purposes."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "أنسال"@ar,
+        "سلالات (حيوانات)"@ar,
+        "Rasse (Tier)"@de,
+        "Tierrasse"@de,
+        "animal breeds"@en,
+        "breeds"@en,
+        "breeds (animal)"@en,
+        "Raza (animal)"@es,
+        "Razas"@es,
+        "Registro de razas"@es,
+        "dierenras"@nl,
+        "ras"@sv,
+        "نسل"@ur .
+
+:CS62 a owl:Class ;
+    rdfs:label "PoultryFarmIdentification"@en ;
+    rdfs:comment "A unique identifier specific to poultry farms, used for traceability and health monitoring purposes." ;
+    rdfs:subClassOf :FarmIdentification ;
+    skos:altLabel "poultry farm identification"@en .
+
+<http://opendata.inra.fr/AHOL/AHOL_0005015> a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Viral Disease" ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/AHOL?p=summary" ;
+    rdfs:comment "Viral disease is an illness caused by a virus, where the virus invades living cells to reproduce, often leading to symptoms like fever, cough, or organ damage." ;
+    rdfs:subClassOf <http://opendata.inra.fr/AHOL/AHOL_0005011> ;
+    skos:altLabel "أمراض فيروسية"@ar,
+        "Virose"@de,
+        "Viruskrankheit"@de,
+        "virale Krankheit"@de,
+        "viral diseases"@en,
+        "viroses"@en,
+        "virus diseases"@en,
+        "Enfermedades por virus"@es,
+        "Enfermedades víricas"@es,
+        "Virosis"@es .
+
+NCIT:NCIT_C25464 a owl:Class ;
+    rdfs:label "Country"@en ;
+    :hasExactSynonym "COUNTRY; Country"@en ;
+    :imported_from "http://purl.obolibrary.org/obo/ncit.owl"@en ;
+    rdfs:seeAlso "https://www.w3.org/2000/01/rdf-schema#" ;
+    rdfs:subClassOf NCIT:NCIT_C25341 .
+
+:FarmIdentification a owl:Class ;
+    rdfs:label "FarmIdentification"@en ;
+    rdfs:comment "Farm identification involves assigning a unique code or name to a specific agricultural property, facilitating tracking and management for regulatory, organizational, or administrative purposes."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "farm identification"@en .
+
+:CS00 a owl:Class ;
+    rdfs:label "House"@en ;
+    rdfs:comment "Represents a housing unit within a farm where a poultry flock is kept."@en ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+<http://www.purl.org/decide#SampleType> a owl:Class ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment "SampleType"@en,
+        """SampleType describes the kind of material or source from which a sample is collected for analysis. 
+Examples include blood, tissue, feces, milk, water, feed, or environmental swabs. 
+It is used to classify samples according to their origin and is essential for interpreting diagnostic and surveillance data."""@en ;
+    rdfs:subClassOf :LivestockHealthOntology .
+
+<http://www.purl.org/decide#Pathogen> a owl:Class ;
+    rdfs:label "Pathogen"@en ;
+    NCIT:IAO_0000412 "https://bioportal.bioontology.org/ontologies/DECIDE?p=summary" ;
+    rdfs:comment "A pathogen is an organism or infectious agent, such as a bacterium, virus or parasite, that causes disease in its host, be it plants, animals, or humans."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "مسببات المرض"@ar,
+        "Pathogen"@de,
+        "pathogener Mikroorganismus"@de,
+        "pathogenic microorganisms"@en,
+        "pathogens"@en,
+        "Microorganismos patógenos"@es,
+        "Organismo patógeno"@es,
+        "Patógenos"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_5630> .
+
+:CS28 a owl:Class ;
+    rdfs:label "Flock"@en ;
+    rdfs:comment "Represents a group of poultry birds in a specific house at a farm, forming a distinct management unit."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "قطعان"@ar,
+        "Herde (Tiergruppe)"@de,
+        "flocks"@en,
+        "Rebaño"@es ;
+    skos:exactMatch <http://aims.fao.org/aos/agrovoc/c_10913> .
+
+:Cattle a :Species,
+        owl:NamedIndividual ;
+    rdfs:label "Cattle"@en ;
+    rdfs:comment "Bovine species - cattle, cows, calves"@en ;
+    skos:altLabel "ماشية"@ar,
+        "Hausrind"@de,
+        "Rind"@de,
+        "domestic cattle"@en,
+        "Ganado bovino"@es,
+        "rund"@nl,
+        "nötkreatur"@sv,
+        "گائے"@ur .
+
+:LivestockHealthOntology a owl:Class ;
+    rdfs:label "LivestockHealthOntology"@en ;
+    :hasExactSynonym "LHO"@en ;
+    rdfs:comment """The Live Stock Health Ontology (LHO), an extension of the DECIDE ontology, serves as a structured framework for organizing information related to the health and well-being of livestock species, encompassing cattle, poultry, pig, and salmon.
+
+LHO facilitates the integration of domain knowledge and data, offering explicit representations of various aspects. In the development process, insights from domain experts contribute to the creation of a prototype designed for reasoning and planning of data, particularly concerning cattle.
+
+Within LHO, concepts include farms with identifications, samples, geolocation, breed, diagnostic tests, and pathogen identifications. Notably, specific bacteria like Histophilus somni (HS), Mannheimia haemolytica (MH), Pasteurella multocida (PM), Bovine coronavirus (BCV), bacterial mycoplasma, and aerobic culture results for the respiratory tract in cattle are covered.
+
+For pigs, additional details encompass FarmType, age, weight-related information, and pathogen names such as Porcine Reproductive and Respiratory Syndrome (PRRS), Swine Infuenza(SI), and Mycoplasma hyopneumoniae are included. This enhanced representation facilitates a comprehensive understanding of pig health, covering aspects of farm classification, age or weight specifics, and the presence of specific pathogens.
+
+Similarly, for poultry, LHO incorporates FarmType along with specific pathogen names like Infectious Bronchitis (IB), offering a detailed perspective on poultry health, including farm categorization and information on prevalent diseases."""@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:altLabel "أنطولوجيا صحة الماشية"@ar,
+        "صحة الماشية"@ar,
+        "livestock health ontology"@en,
+        "Ontologie voor veegezondheid"@nl,
+        "Veegezondheidsontologie"@nl,
+        "veegezondheid"@nl,
+        "مویشیوں کی صحت"@ur,
+        "مویشیوں کی صحت کی آنٹولوجی"@ur .
+
+<http://www.purl.org/decide#Sample> a owl:Class ;
+    rdfs:label "Sample"@en ;
+    rdfs:comment "A base class for Animal Samples",
+        "A sample, such as a CattleSample, PigSample, or PoultrySample, refers to a specimen collected from respective animals for diagnostic or research purposes, often involving testing for diseases or analyzing biological parameters."@en ;
+    rdfs:subClassOf :LivestockHealthOntology ;
+    skos:altLabel "عينة"@ar,
+        "Probe"@de,
+        "samples"@en,
+        "Muestra"@es ;
+    skos:closeMatch <http://aims.fao.org/aos/agrovoc/c_875b7e95> .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Breeder :Broiler :Hatching :Layer :Processing ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Breeding :Finishing :Nursery :Suckling :Weaning ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :CattleProductionStages :PigProductionStages :PoultryProductionStages ) .
+
